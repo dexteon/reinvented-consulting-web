@@ -105,31 +105,31 @@ export default function PricingPage() {
   return (
     <>
       {/* ─── HERO ─────────────────────────────────────────── */}
-      <section className="bg-ca-navy py-20">
+      <section className="section-dark py-20">
         <div className="container-section max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-ca-electric/10 border border-ca-electric/30 text-ca-electric text-sm px-4 py-1.5 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-sm px-4 py-1.5 rounded-full mb-6">
             <Zap className="w-3.5 h-3.5" /> CyberAutomations — Done-For-You AI Services
           </div>
           <h1 className="font-serif text-5xl font-bold text-white leading-tight mb-6">
             Your AI Content Team.{" "}
-            <span className="bg-gradient-to-r from-ca-electric to-ca-mint bg-clip-text text-transparent">Built and Managed For You.</span>
+            <span className="text-gradient-gold">Built and Managed For You.</span>
           </h1>
           <p className="text-white/70 text-xl leading-relaxed mb-4">
             We build, deploy, and manage AI-powered content systems for coaches, consultants, and creators.
             You record a 5-minute voice memo on Monday. By Wednesday, 20 pieces of content are ready to publish.
           </p>
-          <p className="text-ca-muted text-sm">
+          <p className="text-white/40 text-sm">
             No technical skills required. No hiring. No managing. Just results.
           </p>
         </div>
       </section>
 
       {/* ─── PRICING TIERS ────────────────────────────────── */}
-      <section id="pricing" className="bg-ca-offwhite py-16">
+      <section id="pricing" className="section-light py-16">
         <div className="container-section">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl font-bold text-ca-navy mb-3">Simple Monthly Pricing</h2>
-            <p className="text-ca-muted max-w-xl mx-auto">Every plan is fully managed. We build it, we run it, we fix it. You focus on your business.</p>
+            <h2 className="font-serif text-3xl font-bold text-navy mb-3">Simple Monthly Pricing</h2>
+            <p className="text-muted max-w-xl mx-auto">Every plan is fully managed. We build it, we run it, we fix it. You focus on your business.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 items-start max-w-5xl mx-auto">
             {tiers.map((tier) => {
@@ -139,27 +139,27 @@ export default function PricingPage() {
                   key={tier.name}
                   className={`rounded-xl p-6 flex flex-col gap-5 border ${
                     tier.featured
-                      ? "bg-ca-navy border-ca-electric shadow-2xl shadow-ca-electric/10 ring-1 ring-ca-electric/30 md:-mt-4 md:mb-4"
+                      ? "bg-navy border-gold shadow-2xl shadow-gold/10 ring-1 ring-gold/30 md:-mt-4 md:mb-4"
                       : "bg-white border-gray-200 shadow-md"
                   }`}
                 >
                   {tier.badge && (
-                    <div className="inline-flex w-fit bg-ca-electric text-ca-navy text-xs font-bold px-3 py-1 rounded-full">
+                    <div className="inline-flex w-fit bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
                       {tier.badge}
                     </div>
                   )}
 
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <Icon className={`w-5 h-5 ${tier.featured ? "text-ca-electric" : "text-ca-navy"}`} />
-                      <h3 className={`font-serif text-xl font-bold ${tier.featured ? "text-white" : "text-ca-navy"}`}>{tier.name}</h3>
+                      <Icon className={`w-5 h-5 ${tier.featured ? "text-gold" : "text-navy"}`} />
+                      <h3 className={`font-serif text-xl font-bold ${tier.featured ? "text-white" : "text-navy"}`}>{tier.name}</h3>
                     </div>
                     <p className={`text-sm ${tier.featured ? "text-white/50" : "text-muted"}`}>{tier.tagline}</p>
                   </div>
 
                   <div>
                     <div className="flex items-baseline gap-1">
-                      <span className={`text-4xl font-bold ${tier.featured ? "text-ca-electric" : "text-ca-navy"}`}>{tier.price}</span>
+                      <span className={`text-4xl font-bold ${tier.featured ? "text-gold" : "text-navy"}`}>{tier.price}</span>
                       <span className={`text-sm ${tier.featured ? "text-white/40" : "text-muted"}`}>{tier.period}</span>
                     </div>
                     <div className={`flex items-center gap-1.5 mt-1 text-xs ${tier.featured ? "text-white/40" : "text-muted"}`}>
@@ -171,7 +171,7 @@ export default function PricingPage() {
                   <ul className="space-y-2.5 flex-1">
                     {tier.features.map((f) => (
                       <li key={f} className={`flex items-start gap-2.5 text-sm ${tier.featured ? "text-white/80" : "text-navy/80"}`}>
-                        <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 ${tier.featured ? "text-ca-electric" : "text-ca-mint"}`} />
+                        <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 ${tier.featured ? "text-gold" : "text-success"}`} />
                         {f}
                       </li>
                     ))}
@@ -185,8 +185,8 @@ export default function PricingPage() {
                     href="https://calendly.com/cyberautomations"
                     className={`block text-center font-semibold py-3 rounded-lg transition-all ${
                       tier.featured
-                        ? "bg-ca-electric text-ca-navy hover:bg-ca-mint"
-                        : "border-2 border-ca-navy text-ca-navy hover:bg-ca-navy hover:text-white"
+                        ? "bg-gold text-navy hover:bg-gold-light"
+                        : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
                     }`}
                   >
                     {tier.cta} <span className="text-xs opacity-60">→</span>
@@ -200,14 +200,14 @@ export default function PricingPage() {
       </section>
 
       {/* ─── WHAT IS INCLUDED ─────────────────────────────── */}
-      <section className="bg-ca-charcoal py-16">
+      <section className="section-dark py-16">
         <div className="container-section">
           <h2 className="font-serif text-3xl font-bold text-white text-center mb-10">What Powers Your System</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {whatsIncluded.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="bg-ca-slate rounded-xl p-6 border border-white/10 border-l-4 border-l-ca-electric">
-                <div className="w-10 h-10 rounded-lg bg-ca-electric/10 flex items-center justify-center mb-3">
-                  <Icon className="w-5 h-5 text-ca-electric" />
+              <div key={title} className="card-dark card-accent">
+                <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-3">
+                  <Icon className="w-5 h-5 text-gold" />
                 </div>
                 <h3 className="font-serif font-bold text-white mb-2 text-sm">{title}</h3>
                 <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
@@ -241,7 +241,7 @@ export default function PricingPage() {
       </section>
 
       {/* ─── COMPARISON ───────────────────────────────────── */}
-      <section className="bg-ca-navy py-16">
+      <section className="section-dark py-16">
         <div className="container-section max-w-3xl mx-auto">
           <h2 className="font-serif text-2xl font-bold text-white text-center mb-8">CyberAutomations vs. The Alternatives</h2>
           <div className="overflow-x-auto">
@@ -258,42 +258,42 @@ export default function PricingPage() {
               <tbody className="text-white/70">
                 <tr className="border-b border-white/5">
                   <td className="py-2.5">Monthly cost</td>
-                  <td className="text-center text-ca-electric font-semibold">$500-$1,500</td>
+                  <td className="text-center text-gold font-semibold">$500-$1,500</td>
                   <td className="text-center">$3,000-$8,000</td>
                   <td className="text-center">$1,500-$2,500</td>
                   <td className="text-center">$0 (your time)</td>
                 </tr>
                 <tr className="border-b border-white/5">
                   <td className="py-2.5">Pieces/week</td>
-                  <td className="text-center text-ca-electric font-semibold">20+</td>
+                  <td className="text-center text-gold font-semibold">20+</td>
                   <td className="text-center">8-12</td>
                   <td className="text-center">5-8</td>
                   <td className="text-center">3-5</td>
                 </tr>
                 <tr className="border-b border-white/5">
                   <td className="py-2.5">Your time/week</td>
-                  <td className="text-center text-ca-electric font-semibold">5 min</td>
+                  <td className="text-center text-gold font-semibold">5 min</td>
                   <td className="text-center">2-3 hrs</td>
                   <td className="text-center">3-5 hrs</td>
                   <td className="text-center">10-20 hrs</td>
                 </tr>
                 <tr className="border-b border-white/5">
                   <td className="py-2.5">Sounds like you</td>
-                  <td className="text-center text-ca-electric">Yes (Brand Voice AI)</td>
+                  <td className="text-center text-gold">Yes (Brand Voice AI)</td>
                   <td className="text-center">Sometimes</td>
                   <td className="text-center">Rarely</td>
                   <td className="text-center">Always</td>
                 </tr>
                 <tr className="border-b border-white/5">
                   <td className="py-2.5">Scales without hiring</td>
-                  <td className="text-center text-ca-electric">Yes</td>
+                  <td className="text-center text-gold">Yes</td>
                   <td className="text-center">No</td>
                   <td className="text-center">No</td>
                   <td className="text-center">No</td>
                 </tr>
                 <tr>
                   <td className="py-2.5">Runs on weekends/holidays</td>
-                  <td className="text-center text-ca-electric">Yes</td>
+                  <td className="text-center text-gold">Yes</td>
                   <td className="text-center">No</td>
                   <td className="text-center">No</td>
                   <td className="text-center">If you do</td>
@@ -320,23 +320,23 @@ export default function PricingPage() {
       </section>
 
       {/* ─── CTA ──────────────────────────────────────────── */}
-      <section className="bg-gradient-to-r from-ca-electric to-ca-mint py-14">
+      <section className="bg-gold py-14">
         <div className="container-section text-center">
-          <h2 className="font-serif text-3xl font-bold text-ca-navy mb-4">
+          <h2 className="font-serif text-3xl font-bold text-navy mb-4">
             Ready to Stop Creating Content Manually?
           </h2>
-          <p className="text-ca-navy/70 mb-6 max-w-lg mx-auto">
+          <p className="text-navy/70 mb-6 max-w-lg mx-auto">
             Book a 30-minute discovery call. No pitch — just questions about your business and whether this is a fit.
           </p>
           <a
             href="https://calendly.com/cyberautomations"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-ca-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-ca-charcoal transition-all"
+            className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all"
           >
             Book a Discovery Call <ArrowRight className="w-5 h-5" />
           </a>
-          <p className="text-ca-navy/50 text-sm mt-4">
+          <p className="text-navy/50 text-sm mt-4">
             Or email directly: teonmoore@gmail.com
           </p>
         </div>
