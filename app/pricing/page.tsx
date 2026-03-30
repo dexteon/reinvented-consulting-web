@@ -182,7 +182,7 @@ export default function PricingPage() {
                   </div>
 
                   <a
-                    href="mailto:teonmoore@gmail.com?subject=CyberAutomations%20-%20Interested%20in%20the%20"
+                    href="https://calendly.com/cyberautomations"
                     className={`block text-center font-semibold py-3 rounded-lg transition-all ${
                       tier.featured
                         ? "bg-gold text-navy hover:bg-gold-light"
@@ -329,7 +329,7 @@ export default function PricingPage() {
             Book a 30-minute discovery call. No pitch — just questions about your business and whether this is a fit.
           </p>
           <a
-            href="mailto:teonmoore@gmail.com?subject=CyberAutomations%20Discovery%20Call"
+            href="https://calendly.com/cyberautomations"
             className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all"
           >
             Book a Discovery Call <ArrowRight className="w-5 h-5" />

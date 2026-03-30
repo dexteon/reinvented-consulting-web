@@ -84,9 +84,9 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Link href="/pricing" className="btn-outline text-sm px-5 py-2.5 !border-gold/60 !text-gold">
+          <a href="https://calendly.com/cyberautomations" target="_blank" rel="noopener noreferrer" className="btn-outline text-sm px-5 py-2.5 !border-gold/60 !text-gold">
             Book a Call
-          </Link>
+          </a>
           <Link href="/webinar" className="btn-gold text-sm px-5 py-2.5">
             Join Free Webinar →
           </Link>
