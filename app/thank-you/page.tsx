@@ -78,7 +78,7 @@ export default function ThankYouPage() {
               Read their wins, ask questions, and get oriented before the webinar.
             </p>
             <a
-              href="https://skool.com/reinventedconsulting"
+              href="https://www.skool.com/reinvented-mentorship-9193"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline text-sm"

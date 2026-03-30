@@ -59,7 +59,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://skool.com/reinventedconsulting" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.skool.com/reinvented-mentorship-9193" target="_blank" rel="noopener noreferrer"
                   className="hover:text-gold transition-colors">
                   Free Community
                 </a>

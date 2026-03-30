@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+// These are Dub's product pages — this site is a demo of what we'd build for him
 const products = [
   { label: "Free Webinar", href: "/webinar", tag: "Free" },
   { label: "Credit Playbook (Ebook)", href: "/ebook", tag: "$49" },
@@ -61,7 +62,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="https://skool.com/reinventedconsulting"
+            href="https://www.skool.com/reinvented-mentorship-9193"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gold transition-colors"
