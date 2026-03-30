@@ -4,13 +4,14 @@
 
 @layer base {
   :root {
-    --navy: #0D1B2A;
+    --navy: #0B0F19;
+    --surface: #151B2B;
     --gold: #D4AF37;
     --success: #02C39A;
   }
 
   h1, h2, h3 {
-    @apply font-serif;
+    @apply font-serif tracking-tight leading-tight;
   }
 
   /* Smooth scroll */
@@ -20,37 +21,46 @@
 }
 
 @layer components {
-  /* Primary CTA button */
+  /* Primary CTA button — gold gradient with glow */
   .btn-gold {
-    @apply inline-flex items-center gap-2 bg-gold text-navy font-semibold px-8 py-4 rounded-lg
-           hover:bg-gold-light active:bg-gold-dark transition-all duration-200
-           shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base;
+    @apply inline-flex items-center gap-2 bg-gradient-to-r from-[#F9D976] to-[#D4AF37]
+           text-black font-bold px-8 py-4 rounded-xl
+           hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]
+           active:shadow-[0_0_10px_rgba(212,175,55,0.3)]
+           transition-all duration-300 text-base;
   }
 
   /* Secondary button (outlined) */
   .btn-outline {
-    @apply inline-flex items-center gap-2 border-2 border-gold text-gold font-semibold px-8 py-4
-           rounded-lg hover:bg-gold hover:text-navy transition-all duration-200 text-base;
+    @apply inline-flex items-center gap-2 border-2 border-gold text-gold font-bold px-8 py-4
+           rounded-xl hover:bg-gradient-to-r hover:from-[#F9D976] hover:to-[#D4AF37] hover:text-black
+           hover:-translate-y-1 transition-all duration-300 text-base;
   }
 
-  /* Dark hero section */
+  /* Dark section */
   .section-dark {
-    @apply bg-navy text-white;
+    @apply bg-base text-[#F8FAFC];
   }
 
-  /* Light section */
+  /* "Light" section — now a slightly lighter dark surface */
   .section-light {
-    @apply bg-off-white text-navy;
+    @apply bg-[#0E1422] text-[#F8FAFC];
   }
 
-  /* Card on dark bg */
+  /* Card on dark bg — glassmorphism */
   .card-dark {
-    @apply bg-navy-card rounded-xl p-6 border border-white/10;
+    @apply bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/[0.08];
   }
 
-  /* Card on light bg */
+  /* Card on "light" bg — dark surface glassmorphism */
   .card-light {
-    @apply bg-white rounded-xl p-6 shadow-md border border-gray-100;
+    @apply bg-surface/80 backdrop-blur-lg rounded-2xl p-6 border border-white/[0.08];
+  }
+
+  /* Glassmorphism card with hover effects */
+  .card-glass {
+    @apply bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/[0.08]
+           hover:border-[#D4AF37]/50 hover:-translate-y-1 transition-all duration-300;
   }
 
   /* Gold accent left border */
@@ -63,8 +73,21 @@
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Gradient text */
+  /* Gradient text — three-stop gold */
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-gold to-gold-muted bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#F9D976] via-[#E7C05C] to-[#D4AF37] bg-clip-text text-transparent;
+  }
+
+  /* Fading divider */
+  .divider-fade {
+    @apply h-px bg-gradient-to-r from-transparent via-white/20 to-transparent;
+  }
+
+  /* Premium form input */
+  .input-premium {
+    @apply w-full bg-white/5 border border-white/[0.08] rounded-xl px-4 py-3.5 text-sm
+           text-white placeholder:text-white/30
+           focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 focus:border-[#D4AF37]/30
+           transition-all duration-200;
   }
 }

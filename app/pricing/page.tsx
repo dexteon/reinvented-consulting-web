@@ -128,8 +128,8 @@ export default function PricingPage() {
       <section id="pricing" className="section-light py-16">
         <div className="container-section">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl font-bold text-navy mb-3">Simple Monthly Pricing</h2>
-            <p className="text-muted max-w-xl mx-auto">Every plan is fully managed. We build it, we run it, we fix it. You focus on your business.</p>
+            <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-3">Simple Monthly Pricing</h2>
+            <p className="text-[#94A3B8] max-w-xl mx-auto">Every plan is fully managed. We build it, we run it, we fix it. You focus on your business.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 items-start max-w-5xl mx-auto">
             {tiers.map((tier) => {
@@ -137,32 +137,32 @@ export default function PricingPage() {
               return (
                 <div
                   key={tier.name}
-                  className={`rounded-xl p-6 flex flex-col gap-5 border ${
+                  className={`rounded-2xl p-6 flex flex-col gap-5 border transition-all duration-300 ${
                     tier.featured
-                      ? "bg-navy border-gold shadow-2xl shadow-gold/10 ring-1 ring-gold/30 md:-mt-4 md:mb-4"
-                      : "bg-white border-gray-200 shadow-md"
+                      ? "bg-white/5 backdrop-blur-lg border-gold shadow-2xl shadow-gold/10 ring-1 ring-gold/30 md:-mt-4 md:mb-4"
+                      : "bg-surface/80 border-white/[0.08] hover:border-[#D4AF37]/50 hover:-translate-y-1"
                   }`}
                 >
                   {tier.badge && (
-                    <div className="inline-flex w-fit bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
+                    <div className="inline-flex w-fit bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black text-xs font-bold px-3 py-1 rounded-full">
                       {tier.badge}
                     </div>
                   )}
 
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <Icon className={`w-5 h-5 ${tier.featured ? "text-gold" : "text-navy"}`} />
-                      <h3 className={`font-serif text-xl font-bold ${tier.featured ? "text-white" : "text-navy"}`}>{tier.name}</h3>
+                      <Icon className={`w-5 h-5 ${tier.featured ? "text-gold" : "text-gold"}`} />
+                      <h3 className="font-serif text-xl font-bold text-[#F8FAFC]">{tier.name}</h3>
                     </div>
-                    <p className={`text-sm ${tier.featured ? "text-white/50" : "text-muted"}`}>{tier.tagline}</p>
+                    <p className="text-sm text-[#94A3B8]">{tier.tagline}</p>
                   </div>
 
                   <div>
                     <div className="flex items-baseline gap-1">
-                      <span className={`text-4xl font-bold ${tier.featured ? "text-gold" : "text-navy"}`}>{tier.price}</span>
-                      <span className={`text-sm ${tier.featured ? "text-white/40" : "text-muted"}`}>{tier.period}</span>
+                      <span className={`text-4xl font-bold ${tier.featured ? "text-gold" : "text-[#F8FAFC]"}`}>{tier.price}</span>
+                      <span className="text-sm text-[#94A3B8]">{tier.period}</span>
                     </div>
-                    <div className={`flex items-center gap-1.5 mt-1 text-xs ${tier.featured ? "text-white/40" : "text-muted"}`}>
+                    <div className="flex items-center gap-1.5 mt-1 text-xs text-[#94A3B8]">
                       <Clock className="w-3 h-3" />
                       {tier.commitment}
                     </div>
@@ -170,23 +170,23 @@ export default function PricingPage() {
 
                   <ul className="space-y-2.5 flex-1">
                     {tier.features.map((f) => (
-                      <li key={f} className={`flex items-start gap-2.5 text-sm ${tier.featured ? "text-white/80" : "text-navy/80"}`}>
-                        <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 ${tier.featured ? "text-gold" : "text-success"}`} />
+                      <li key={f} className="flex items-start gap-2.5 text-sm text-[#94A3B8]">
+                        <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-gold" />
                         {f}
                       </li>
                     ))}
                   </ul>
 
-                  <div className={`p-3 rounded-lg text-xs leading-relaxed ${tier.featured ? "bg-white/5 text-white/50" : "bg-navy/5 text-muted"}`}>
+                  <div className="p-3 rounded-lg text-xs leading-relaxed bg-white/5 text-[#94A3B8]">
                     <strong>Best for:</strong> {tier.best}
                   </div>
 
                   <a
                     href="https://calendly.com/cyberautomations"
-                    className={`block text-center font-semibold py-3 rounded-lg transition-all ${
+                    className={`block text-center font-bold py-3 rounded-xl transition-all duration-300 ${
                       tier.featured
-                        ? "bg-gold text-navy hover:bg-gold-light"
-                        : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
+                        ? "bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                        : "border-2 border-gold text-gold hover:bg-gradient-to-r hover:from-[#F9D976] hover:to-[#D4AF37] hover:text-black hover:-translate-y-1"
                     }`}
                   >
                     {tier.cta} <span className="text-xs opacity-60">→</span>
@@ -220,7 +220,7 @@ export default function PricingPage() {
       {/* ─── PROCESS ──────────────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl font-bold text-navy text-center mb-10">From Zero to Live in 14 Days</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] text-center mb-10">From Zero to Live in 14 Days</h2>
           <div className="space-y-4">
             {process_steps.map(({ num, title, desc, time }) => (
               <div key={num} className="flex gap-4 card-light card-accent">
@@ -231,8 +231,8 @@ export default function PricingPage() {
                   <p className="text-muted text-xs mt-1">{time}</p>
                 </div>
                 <div>
-                  <h3 className="font-serif font-bold text-navy text-sm">{title}</h3>
-                  <p className="text-muted text-sm">{desc}</p>
+                  <h3 className="font-serif font-bold text-[#F8FAFC] text-sm">{title}</h3>
+                  <p className="text-[#94A3B8] text-sm">{desc}</p>
                 </div>
               </div>
             ))}
@@ -307,12 +307,12 @@ export default function PricingPage() {
       {/* ─── FAQ ──────────────────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section max-w-2xl mx-auto">
-          <h2 className="font-serif text-2xl font-bold text-navy text-center mb-8">Questions</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#F8FAFC] text-center mb-8">Questions</h2>
           <div className="space-y-3">
             {faqs.map(({ q, a }) => (
               <div key={q} className="card-light card-accent">
-                <p className="font-semibold text-navy text-sm mb-1">{q}</p>
-                <p className="text-muted text-sm">{a}</p>
+                <p className="font-semibold text-[#F8FAFC] text-sm mb-1">{q}</p>
+                <p className="text-[#94A3B8] text-sm">{a}</p>
               </div>
             ))}
           </div>
@@ -320,23 +320,23 @@ export default function PricingPage() {
       </section>
 
       {/* ─── CTA ──────────────────────────────────────────── */}
-      <section className="bg-gold py-14">
+      <section className="bg-surface py-14 border-t border-white/[0.08]">
         <div className="container-section text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-4">
             Ready to Stop Creating Content Manually?
           </h2>
-          <p className="text-navy/70 mb-6 max-w-lg mx-auto">
+          <p className="text-[#94A3B8] mb-6 max-w-lg mx-auto">
             Book a 30-minute discovery call. No pitch — just questions about your business and whether this is a fit.
           </p>
           <a
             href="https://calendly.com/cyberautomations"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all"
+            className="btn-gold text-lg px-8 py-4"
           >
             Book a Discovery Call <ArrowRight className="w-5 h-5" />
           </a>
-          <p className="text-navy/50 text-sm mt-4">
+          <p className="text-[#94A3B8]/50 text-sm mt-4">
             Or email directly: teonmoore@gmail.com
           </p>
         </div>

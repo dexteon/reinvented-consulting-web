@@ -9,12 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Premium dark design system
+        base: "#0B0F19",
+        surface: "#151B2B",
         // Reinvented Consulting (Dub's demo pages)
         navy: {
-          DEFAULT: "#0D1B2A",
-          light: "#1A2E3B",
-          card: "#132232",
-          deep: "#0A1929",
+          DEFAULT: "#0B0F19",
+          light: "#1E2A40",
+          card: "#151B2B",
+          deep: "#080C15",
         },
         gold: {
           DEFAULT: "#D4AF37",
@@ -33,17 +36,21 @@ const config: Config = {
           offwhite: "#F8FAFC",
         },
         success: "#02C39A",
-        muted: "#6B7A8D",
-        "off-white": "#F8F9FA",
+        muted: "#94A3B8",
+        "off-white": "#0E1422",
+        "text-primary": "#F8FAFC",
+        "text-secondary": "#94A3B8",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
         serif: ["var(--font-playfair)", "serif"],
       },
       backgroundImage: {
-        "gradient-navy": "linear-gradient(135deg, #0D1B2A 0%, #1A2E3B 100%)",
-        "gradient-gold": "linear-gradient(135deg, #D4AF37 0%, #F0D060 100%)",
-        "hero-overlay": "linear-gradient(to right, rgba(13,27,42,0.95) 50%, rgba(13,27,42,0.6) 100%)",
+        "gradient-navy": "linear-gradient(135deg, #0B0F19 0%, #151B2B 100%)",
+        "gradient-gold": "linear-gradient(135deg, #F9D976 0%, #D4AF37 100%)",
+        "gradient-gold-text": "linear-gradient(to right, #F9D976, #E7C05C, #D4AF37)",
+        "hero-overlay": "linear-gradient(to right, rgba(11,15,25,0.95) 50%, rgba(11,15,25,0.6) 100%)",
+        "hero-radial-glow": "radial-gradient(circle at center, rgba(212,175,55,0.15), transparent 50%)",
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",

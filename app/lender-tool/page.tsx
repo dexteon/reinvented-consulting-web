@@ -61,15 +61,15 @@ export default function LenderToolPage() {
       {/* ─── HOW IT WORKS ─────────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section">
-          <h2 className="font-serif text-3xl font-bold text-navy text-center mb-10">How It Works</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] text-center mb-10">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map(({ num, title, desc }) => (
               <div key={num} className="card-light card-accent text-center">
                 <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
                   <span className="text-gold font-bold">{num}</span>
                 </div>
-                <h3 className="font-serif font-bold text-navy mb-2">{title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{desc}</p>
+                <h3 className="font-serif font-bold text-[#F8FAFC] mb-2">{title}</h3>
+                <p className="text-[#94A3B8] text-sm leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -110,14 +110,14 @@ export default function LenderToolPage() {
       {/* ─── WHY THIS WORKS ───────────────────────────────── */}
       <section className="section-light py-14">
         <div className="container-section max-w-2xl mx-auto">
-          <h2 className="font-serif text-2xl font-bold text-navy text-center mb-6">Why Public Bank Lists Do Not Work</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#F8FAFC] text-center mb-6">Why Public Bank Lists Do Not Work</h2>
           <div className="card-light card-accent">
-            <p className="text-navy/80 text-sm leading-relaxed mb-4">
+            <p className="text-[#94A3B8] text-sm leading-relaxed mb-4">
               Every bank publishes their minimum credit score requirements. But those are just the floor — not the
               actual approval criteria. Banks also weigh business age, account history, deposit relationships,
               DBA vs. LLC structure, and whether you have an existing relationship.
             </p>
-            <p className="text-navy/80 text-sm leading-relaxed">
+            <p className="text-[#94A3B8] text-sm leading-relaxed">
               The Lender Matching Tool uses data from the 9,100-member community — real applications, real approvals,
               real denials — to identify which banks are most likely to approve your specific profile <em>right now</em>,
               not based on generic published criteria.
@@ -142,7 +142,7 @@ export default function LenderToolPage() {
       {/* ─── TESTIMONIALS ─────────────────────────────────── */}
       <section className="section-light py-14">
         <div className="container-section">
-          <h2 className="font-serif text-2xl font-bold text-navy text-center mb-8">What Tool Users Say</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#F8FAFC] text-center mb-8">What Tool Users Say</h2>
           <div className="grid md:grid-cols-4 gap-5">
             {testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
           </div>
@@ -150,11 +150,11 @@ export default function LenderToolPage() {
       </section>
 
       {/* ─── CTA ──────────────────────────────────────────── */}
-      <section className="bg-gold py-14">
+      <section className="bg-surface py-14 border-t border-white/[0.08]">
         <div className="container-section text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">Stop Guessing. Start With the Right Banks.</h2>
-          <p className="text-navy/70 mb-6">$197. One-time. Instant access to your personalized PDF report.</p>
-          <a href="/api/checkout?product=lender_tool" className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all">
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-4">Stop Guessing. Start With the Right Banks.</h2>
+          <p className="text-[#94A3B8] mb-6">$197. One-time. Instant access to your personalized PDF report.</p>
+          <a href="/api/checkout?product=lender_tool" className="btn-gold text-lg px-8 py-4">
             Get My Lender Matches <ArrowRight className="w-5 h-5" />
           </a>
         </div>

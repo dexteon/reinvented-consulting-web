@@ -76,7 +76,7 @@ export default function EbookPage() {
       {/* ─── CHAPTERS ─────────────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section">
-          <h2 className="font-serif text-3xl font-bold text-navy text-center mb-10">What Is Inside</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] text-center mb-10">What Is Inside</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {chapters.map(({ num, title, desc }) => (
               <div key={num} className="card-light card-accent flex gap-4">
@@ -84,8 +84,8 @@ export default function EbookPage() {
                   {num}
                 </div>
                 <div>
-                  <h3 className="font-serif font-bold text-navy text-sm mb-1">{title}</h3>
-                  <p className="text-muted text-sm">{desc}</p>
+                  <h3 className="font-serif font-bold text-[#F8FAFC] text-sm mb-1">{title}</h3>
+                  <p className="text-[#94A3B8] text-sm">{desc}</p>
                 </div>
               </div>
             ))}
@@ -130,7 +130,7 @@ export default function EbookPage() {
       {/* ─── TESTIMONIALS ─────────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section">
-          <h2 className="font-serif text-3xl font-bold text-navy text-center mb-8">What Readers Say</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] text-center mb-8">What Readers Say</h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-5">
             {testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
           </div>
@@ -138,11 +138,11 @@ export default function EbookPage() {
       </section>
 
       {/* ─── CTA ──────────────────────────────────────────── */}
-      <section className="bg-gold py-14">
+      <section className="bg-surface py-14 border-t border-white/[0.08]">
         <div className="container-section text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">$49. Instant Access. No Risk.</h2>
-          <p className="text-navy/70 mb-6">30-day money-back guarantee. If you read it and it does not help, email us.</p>
-          <a href="/api/checkout?product=ebook" className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all">
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-4">$49. Instant Access. No Risk.</h2>
+          <p className="text-[#94A3B8] mb-6">30-day money-back guarantee. If you read it and it does not help, email us.</p>
+          <a href="/api/checkout?product=ebook" className="btn-gold text-lg px-8 py-4">
             Get the Ebook Now <ArrowRight className="w-5 h-5" />
           </a>
         </div>

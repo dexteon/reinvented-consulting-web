@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import Image from "next/image";
 import "./globals.css";
 import DemoBanner from "@/components/layout/DemoBanner";
 import Navbar from "@/components/layout/Navbar";
@@ -47,10 +48,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="bg-white font-sans text-navy antialiased">
+      <body className="bg-base font-sans text-[#F8FAFC] antialiased">
+        {/* Persistent ambient background */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <Image src="/images/rc/dub-bg.png" alt="" fill className="object-cover object-top opacity-[0.04]" />
+        </div>
         <DemoBanner />
         <Navbar />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
         <DemoBadge />
         <Analytics />

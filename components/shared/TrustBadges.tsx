@@ -12,8 +12,8 @@ export default function TrustBadges({ dark = false }: { dark?: boolean }) {
     <div className="flex flex-wrap items-center justify-center gap-6 py-4">
       {badges.map(({ icon: Icon, label }) => (
         <div key={label} className="flex items-center gap-2">
-          <Icon className={`w-4 h-4 ${dark ? "text-gold" : "text-success"}`} />
-          <span className={`text-xs font-medium ${dark ? "text-white/60" : "text-muted"}`}>{label}</span>
+          <Icon className="w-4 h-4 text-gold" />
+          <span className="text-xs font-medium text-[#94A3B8]">{label}</span>
         </div>
       ))}
     </div>

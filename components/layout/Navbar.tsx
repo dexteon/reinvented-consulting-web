@@ -22,7 +22,7 @@ export default function Navbar() {
   const [productsOpen, setProductsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-[36px] z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+    <nav className="sticky top-[36px] z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/[0.08]">
       <div className="container-section flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -51,7 +51,7 @@ export default function Navbar() {
               Products <ChevronDown className="w-3.5 h-3.5" />
             </button>
             {productsOpen && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-navy-card border border-white/10 rounded-xl shadow-2xl py-2">
+              <div className="absolute top-full left-0 mt-2 w-64 bg-surface/95 backdrop-blur-lg border border-white/[0.08] rounded-2xl shadow-2xl py-2">
                 {products.map((p) => (
                   <Link
                     key={p.href}
@@ -111,7 +111,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-navy-card border-t border-white/10 px-4 py-4 space-y-1">
+        <div className="md:hidden bg-surface/95 backdrop-blur-lg border-t border-white/[0.08] px-4 py-4 space-y-1">
           <Link
             href="/webinar"
             onClick={() => setOpen(false)}
@@ -119,7 +119,7 @@ export default function Navbar() {
           >
             Free Webinar
           </Link>
-          <div className="h-px bg-white/10 my-1" />
+          <div className="h-px bg-white/[0.08] my-1" />
           {products.slice(1).map((p) => (
             <Link
               key={p.href}
@@ -131,7 +131,7 @@ export default function Navbar() {
               <span className="text-gold text-xs font-semibold">{p.tag}</span>
             </Link>
           ))}
-          <div className="h-px bg-white/10 my-1" />
+          <div className="h-px bg-white/[0.08] my-1" />
           <Link
             href="/webinar"
             onClick={() => setOpen(false)}

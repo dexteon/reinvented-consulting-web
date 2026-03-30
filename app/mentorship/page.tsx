@@ -100,7 +100,7 @@ export default function MentorshipPage() {
       <section className="section-dark py-20 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/rc/dub-bg.png" alt="" fill className="object-cover object-top opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/95 to-navy" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/90 via-[#0B0F19]/95 to-[#0B0F19]" />
         </div>
         <div className="container-section relative z-10 text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-sm px-4 py-1.5 rounded-full mb-6">
@@ -111,7 +111,7 @@ export default function MentorshipPage() {
             <span className="text-gradient-gold">9,100+ Entrepreneurs</span>{" "}
             Access Real Funding
           </h1>
-          <p className="text-white/70 text-xl mb-8">
+          <p className="text-[#94A3B8] text-xl mb-8">
             A 12-week intensive with Dub Washington — from credit cleanup to your first approval.
             Not theory. The actual system, with Dub guiding you through it.
           </p>
@@ -129,13 +129,13 @@ export default function MentorshipPage() {
       {/* ─── IS THIS FOR YOU ──────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section max-w-3xl">
-          <h2 className="font-serif text-3xl font-bold text-navy text-center mb-8">Is This For You?</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] text-center mb-8">Is This For You?</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="card-light border-l-4 border-success">
-              <p className="font-semibold text-navy mb-3 text-sm uppercase tracking-wide">This is for you if...</p>
+              <p className="font-semibold text-[#F8FAFC] mb-3 text-sm uppercase tracking-wide">This is for you if...</p>
               <ul className="space-y-2.5">
                 {yesChecks.map((t) => (
-                  <li key={t} className="flex items-start gap-2.5 text-sm text-navy/80">
+                  <li key={t} className="flex items-start gap-2.5 text-sm text-[#94A3B8]">
                     <CheckCircle2 className="w-4 h-4 text-success mt-0.5 shrink-0" />
                     {t}
                   </li>
@@ -143,10 +143,10 @@ export default function MentorshipPage() {
               </ul>
             </div>
             <div className="card-light border-l-4 border-red-300">
-              <p className="font-semibold text-navy mb-3 text-sm uppercase tracking-wide">This is NOT for you if...</p>
+              <p className="font-semibold text-[#F8FAFC] mb-3 text-sm uppercase tracking-wide">This is NOT for you if...</p>
               <ul className="space-y-2.5">
                 {noChecks.map((t) => (
-                  <li key={t} className="flex items-start gap-2.5 text-sm text-navy/80">
+                  <li key={t} className="flex items-start gap-2.5 text-sm text-[#94A3B8]">
                     <X className="w-4 h-4 text-red-400 mt-0.5 shrink-0" />
                     {t}
                   </li>
@@ -172,7 +172,7 @@ export default function MentorshipPage() {
             </div>
             <div>
               <h2 className="font-serif text-3xl font-bold text-white mb-4">See What&apos;s Inside</h2>
-              <p className="text-white/60 mb-6">
+              <p className="text-[#94A3B8] mb-6">
                 Full course library with structured modules — from Funding Sequences to Business Credit
                 to Scaling with A.I. Plus monthly accountability calls and a private community of 9,100+ members.
               </p>
@@ -216,38 +216,38 @@ export default function MentorshipPage() {
       <section id="tiers" className="section-light py-16">
         <div className="container-section">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl font-bold text-navy mb-3">Choose Your Track</h2>
-            <p className="text-muted max-w-xl mx-auto">All tracks include the full 12-week curriculum and community access. Upgrade for more personal access to Dub.</p>
+            <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-3">Choose Your Track</h2>
+            <p className="text-[#94A3B8] max-w-xl mx-auto">All tracks include the full 12-week curriculum and community access. Upgrade for more personal access to Dub.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 items-start">
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`rounded-xl p-6 flex flex-col gap-5 border ${
+                className={`rounded-2xl p-6 flex flex-col gap-5 border transition-all duration-300 ${
                   tier.featured
-                    ? "bg-navy border-gold shadow-2xl shadow-gold/10 ring-1 ring-gold/30 md:-mt-4"
-                    : "bg-white border-gray-200 shadow-md"
+                    ? "bg-white/5 backdrop-blur-lg border-gold shadow-2xl shadow-gold/10 ring-1 ring-gold/30 md:-mt-4"
+                    : "bg-surface/80 border-white/[0.08] hover:border-[#D4AF37]/50 hover:-translate-y-1"
                 }`}
               >
                 {tier.badge && (
-                  <div className="inline-flex w-fit bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
+                  <div className="inline-flex w-fit bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black text-xs font-bold px-3 py-1 rounded-full">
                     {tier.badge}
                   </div>
                 )}
                 <div>
-                  <h3 className={`font-serif text-xl font-bold ${tier.featured ? "text-white" : "text-navy"}`}>{tier.name}</h3>
-                  <p className={`font-bold text-3xl mt-1 ${tier.featured ? "text-gold" : "text-navy"}`}>{tier.price}</p>
-                  <p className={`text-sm mt-0.5 ${tier.featured ? "text-white/50" : "text-muted"}`}>one-time payment</p>
+                  <h3 className="font-serif text-xl font-bold text-[#F8FAFC]">{tier.name}</h3>
+                  <p className={`font-bold text-3xl mt-1 ${tier.featured ? "text-gold" : "text-[#F8FAFC]"}`}>{tier.price}</p>
+                  <p className="text-sm mt-0.5 text-[#94A3B8]">one-time payment</p>
                 </div>
                 <ul className="space-y-2.5 flex-1">
                   {tier.features.map((f) => (
-                    <li key={f} className={`flex items-start gap-2.5 text-sm ${tier.featured ? "text-white/80" : "text-navy/80"}`}>
-                      <CheckCircle2 className={`w-4 h-4 mt-0.5 shrink-0 ${tier.featured ? "text-gold" : "text-success"}`} />
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-[#94A3B8]">
+                      <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-gold" />
                       {f}
                     </li>
                   ))}
                   {tier.notIncluded.map((f) => (
-                    <li key={f} className={`flex items-start gap-2.5 text-sm opacity-30 ${tier.featured ? "text-white" : "text-navy"}`}>
+                    <li key={f} className="flex items-start gap-2.5 text-sm opacity-30 text-[#94A3B8]">
                       <X className="w-4 h-4 mt-0.5 shrink-0" />
                       {f}
                     </li>
@@ -255,10 +255,10 @@ export default function MentorshipPage() {
                 </ul>
                 <a
                   href={`/api/checkout?product=${tier.priceId}`}
-                  className={`block text-center font-semibold py-3 rounded-lg transition-all ${
+                  className={`block text-center font-bold py-3 rounded-xl transition-all duration-300 ${
                     tier.featured
-                      ? "bg-gold text-navy hover:bg-gold-light"
-                      : "border-2 border-navy text-navy hover:bg-navy hover:text-white"
+                      ? "bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                      : "border-2 border-gold text-gold hover:bg-gradient-to-r hover:from-[#F9D976] hover:to-[#D4AF37] hover:text-black hover:-translate-y-1"
                   }`}
                 >
                   {tier.cta}
@@ -281,16 +281,16 @@ export default function MentorshipPage() {
       </section>
 
       {/* ─── FINAL CTA ────────────────────────────────────── */}
-      <section className="bg-gold py-14">
+      <section className="bg-surface py-14 border-t border-white/[0.08]">
         <div className="container-section text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-4">
             Not Ready for Mentorship Yet?
           </h2>
-          <p className="text-navy/70 mb-6 max-w-lg mx-auto">
+          <p className="text-[#94A3B8] mb-6 max-w-lg mx-auto">
             Start with the $297 Credit Audit. We will review your specific situation and build your roadmap.
             40-50% of audit clients enroll in mentorship afterward.
           </p>
-          <Link href="/credit-audit" className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all">
+          <Link href="/credit-audit" className="btn-gold text-lg px-8 py-4">
             Book a Credit Audit First <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

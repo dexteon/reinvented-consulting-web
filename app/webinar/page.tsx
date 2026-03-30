@@ -71,7 +71,7 @@ export default function WebinarPage() {
   };
 
   const CtaButton = ({ className = "" }: { className?: string }) => (
-    <a href="#register" className={`inline-flex flex-col items-center bg-gold text-navy font-bold px-10 py-4 rounded-xl hover:bg-gold-light transition-all shadow-lg shadow-gold/20 ${className}`}>
+    <a href="#register" className={`inline-flex flex-col items-center bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black font-bold px-10 py-4 rounded-xl hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300 shadow-lg shadow-gold/20 ${className}`}>
       <span className="text-lg">YES, I WANT TO ATTEND</span>
       <span className="text-xs font-semibold opacity-70 tracking-wider">SECURE MY SEAT</span>
     </a>
@@ -83,13 +83,13 @@ export default function WebinarPage() {
       <section className="section-dark relative overflow-hidden py-16">
         <div className="absolute inset-0">
           <Image src="/images/rc/dub-bg.png" alt="" fill className="object-cover object-top opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-navy" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/95 via-[#0B0F19]/90 to-[#0B0F19]" />
         </div>
 
         <div className="container-section relative z-10 text-center max-w-3xl mx-auto">
           <Image src="/images/rc/logo.png" alt="Reinvented Consulting" width={160} height={56} className="mx-auto mb-6" />
 
-          <p className="text-sm uppercase tracking-widest text-white/50 mb-2">
+          <p className="text-sm uppercase tracking-widest text-[#94A3B8] mb-2">
             Learn My 3 Step <span className="text-gold font-semibold">Credit Card Stacking</span> Methods To Secure 0% Capital
           </p>
 
@@ -104,11 +104,11 @@ export default function WebinarPage() {
             In Less Than 24 Months!!
           </h1>
 
-          <p className="text-white/60 text-lg mb-4">
+          <p className="text-[#94A3B8] text-lg mb-4">
             Make The Banks Compete To Lend You Money with <span className="text-gold font-semibold">Dub Washington</span>
           </p>
 
-          <div className="flex items-center justify-center gap-4 text-white/70 mb-8">
+          <div className="flex items-center justify-center gap-4 text-[#94A3B8] mb-8">
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-gold" />
               <span className="text-sm font-medium">Thursday, April 2nd, 2026</span>
@@ -124,7 +124,8 @@ export default function WebinarPage() {
       </section>
 
       {/* ─── VIDEO ─────────────────────────────────────────── */}
-      <section className="section-dark py-16 border-t border-gold/10">
+      <section className="section-dark py-16 relative">
+        <div className="divider-fade absolute top-0 left-0 right-0" />
         <div className="container-section max-w-3xl">
           <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-gold/20" style={{ paddingBottom: "56.25%" }}>
             <iframe
@@ -142,10 +143,10 @@ export default function WebinarPage() {
       <section className="section-light py-20">
         <div className="container-section">
           <div className="text-center mb-4">
-            <h2 className="font-serif text-4xl font-bold text-navy mb-3">
+            <h2 className="font-serif text-4xl font-bold text-[#F8FAFC] mb-3">
               What You&apos;ll Learn
             </h2>
-            <p className="text-muted max-w-2xl mx-auto">
+            <p className="text-[#94A3B8] max-w-2xl mx-auto">
               Ready to learn how to rebuild and structure your credit report to maximize funding your business?
             </p>
           </div>
@@ -157,8 +158,8 @@ export default function WebinarPage() {
                     <Icon className="w-6 h-6 text-gold" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-lg font-bold text-navy mb-2">{title}</h3>
-                    <p className="text-muted text-sm leading-relaxed">{desc}</p>
+                    <h3 className="font-serif text-lg font-bold text-[#F8FAFC] mb-2">{title}</h3>
+                    <p className="text-[#94A3B8] text-sm leading-relaxed">{desc}</p>
                   </div>
                 </div>
               </div>
@@ -171,9 +172,9 @@ export default function WebinarPage() {
       </section>
 
       {/* ─── WEBINAR STARTING SOON ─────────────────────────── */}
-      <section className="bg-gold py-6">
+      <section className="bg-gradient-to-r from-[#F9D976] to-[#D4AF37] py-6">
         <div className="container-section text-center">
-          <p className="text-navy font-bold text-lg">
+          <p className="text-black font-bold text-lg">
             Webinar Starting Soon — <span className="font-serif">Thursday, April 2nd 8 PM EST</span>
           </p>
         </div>
@@ -199,7 +200,7 @@ export default function WebinarPage() {
               <h2 className="font-serif text-4xl font-bold text-white mb-6">
                 Meet <span className="text-gradient-gold">Dub Washington</span>
               </h2>
-              <div className="space-y-4 text-white/70 leading-relaxed text-sm">
+              <div className="space-y-4 text-[#94A3B8] leading-relaxed text-sm">
                 <p>
                   Yo! I&apos;m Dub Washington, a passionate 37-year-old entrepreneur, devoted husband, and proud father of three amazing kings. My life&apos;s mission revolves around turning dreams into reality, both for myself and others around me!
                 </p>
@@ -226,15 +227,15 @@ export default function WebinarPage() {
         <div className="container-section max-w-4xl">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Option 1 — Trial & Error */}
-            <div className="rounded-xl border-2 border-red-200 bg-red-50/50 p-6">
+            <div className="rounded-xl border-2 border-red-500/30 bg-red-500/5 p-6">
               <div className="text-center mb-4">
                 <span className="text-xs uppercase tracking-widest text-red-400 font-bold">Option #1</span>
-                <h3 className="font-serif text-xl font-bold text-navy mt-1">Figuring It Out Through Trial and Error</h3>
-                <p className="text-muted text-xs italic">Doing Everything On Your Own</p>
+                <h3 className="font-serif text-xl font-bold text-[#F8FAFC] mt-1">Figuring It Out Through Trial and Error</h3>
+                <p className="text-[#94A3B8] text-xs italic">Doing Everything On Your Own</p>
               </div>
               <ul className="space-y-4">
                 {option1.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-navy/70">
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#94A3B8]">
                     <XIcon className="w-5 h-5 text-red-400 mt-0.5 shrink-0" />
                     {item}
                   </li>
@@ -243,15 +244,15 @@ export default function WebinarPage() {
             </div>
 
             {/* Option 2 — Proven Strategies */}
-            <div className="rounded-xl border-2 border-gold bg-gold/5 p-6 ring-1 ring-gold/30 shadow-lg">
+            <div className="rounded-xl border-2 border-gold bg-white/5 p-6 ring-1 ring-gold/30 shadow-lg">
               <div className="text-center mb-4">
                 <span className="text-xs uppercase tracking-widest text-gold font-bold">Option #2</span>
-                <h3 className="font-serif text-xl font-bold text-navy mt-1">Learning From Proven Strategies</h3>
-                <p className="text-muted text-xs italic">Using Proven Strategies To Grow Your Business</p>
+                <h3 className="font-serif text-xl font-bold text-[#F8FAFC] mt-1">Learning From Proven Strategies</h3>
+                <p className="text-[#94A3B8] text-xs italic">Using Proven Strategies To Grow Your Business</p>
               </div>
               <ul className="space-y-4">
                 {option2.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-navy/80">
+                  <li key={item} className="flex items-start gap-3 text-sm text-[#F8FAFC]/80">
                     <CheckCircle2 className="w-5 h-5 text-gold mt-0.5 shrink-0" />
                     {item}
                   </li>
@@ -271,13 +272,13 @@ export default function WebinarPage() {
           <h2 className="font-serif text-4xl font-bold text-white mb-3">
             <span className="text-gradient-gold">Success Has Receipts!</span>
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto mb-10">
+          <p className="text-[#94A3B8] max-w-2xl mx-auto mb-10">
             Check out the limits Dub has been able to obtain using the methods he will teach in the Masterclass!
           </p>
           {/* Placeholder grid for credit card limit screenshots */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10">
             {["$50,000", "$35,000", "$25,000", "$40,000", "$30,000", "$45,000", "$20,000", "$60,000"].map((amount, i) => (
-              <div key={i} className="bg-navy-card border border-gold/20 rounded-xl p-4 text-center">
+              <div key={i} className="bg-surface border border-gold/20 rounded-xl p-4 text-center">
                 <CreditCard className="w-8 h-8 text-gold mx-auto mb-2" />
                 <p className="text-gold font-bold text-lg">{amount}</p>
                 <p className="text-white/40 text-xs">Credit Limit</p>
@@ -292,19 +293,19 @@ export default function WebinarPage() {
       <section id="register" className="section-light py-20">
         <div className="container-section max-w-xl">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-4xl font-bold text-navy mb-3">
+            <h2 className="font-serif text-4xl font-bold text-[#F8FAFC] mb-3">
               My Final Question For You...
             </h2>
             <p className="font-serif text-3xl text-gold font-bold">Are You Ready?</p>
-            <p className="text-muted mt-3">
+            <p className="text-[#94A3B8] mt-3">
               Enroll in my Free Masterclass today to unlock the full potential of your venture. Success is within reach, and it begins with knowledge.
             </p>
-            <p className="text-navy font-semibold mt-2">
+            <p className="text-[#F8FAFC] font-semibold mt-2">
               Secure your seat now! <span className="text-gold">100 spots available.</span>
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-2xl border border-gold/20">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/[0.08]">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               {/* Honeypot */}
               <input {...register("website")} type="text" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -314,7 +315,7 @@ export default function WebinarPage() {
                   {...register("firstName")}
                   type="text"
                   placeholder="Full Name..."
-                  className="w-full border border-gray-200 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
+                  className="input-premium"
                 />
                 {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName.message}</p>}
               </div>
@@ -324,7 +325,7 @@ export default function WebinarPage() {
                   {...register("email")}
                   type="email"
                   placeholder="Email Address..."
-                  className="w-full border border-gray-200 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
+                  className="input-premium"
                 />
                 {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
               </div>
@@ -334,15 +335,15 @@ export default function WebinarPage() {
                   {...register("phone")}
                   type="tel"
                   placeholder="Phone Number..."
-                  className="w-full border border-gray-200 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
+                  className="input-premium"
                 />
               </div>
 
               {serverError && (
-                <p className="text-red-500 text-sm bg-red-50 rounded-lg p-3">{serverError}</p>
+                <p className="text-red-400 text-sm bg-red-500/10 rounded-lg p-3">{serverError}</p>
               )}
 
-              <button type="submit" disabled={isSubmitting} className="w-full bg-gold text-navy font-bold text-lg py-4 rounded-xl hover:bg-gold-light transition-all shadow-lg shadow-gold/20 flex flex-col items-center">
+              <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black font-bold text-lg py-4 rounded-xl hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300 shadow-lg shadow-gold/20 flex flex-col items-center">
                 {isSubmitting ? (
                   <span className="flex items-center gap-2"><Loader2 className="w-5 h-5 animate-spin" /> Registering...</span>
                 ) : (
@@ -353,7 +354,7 @@ export default function WebinarPage() {
                 )}
               </button>
 
-              <p className="text-xs text-muted text-center">
+              <p className="text-xs text-[#94A3B8] text-center">
                 We respect your privacy &amp; information.
               </p>
             </form>
@@ -362,7 +363,7 @@ export default function WebinarPage() {
       </section>
 
       {/* ─── DISCLAIMER ────────────────────────────────────── */}
-      <section className="bg-navy-deep py-8 border-t border-white/10">
+      <section className="bg-[#080C15] py-8 border-t border-white/[0.08]">
         <div className="container-section max-w-3xl text-center">
           <p className="text-white/30 text-[10px] leading-relaxed">
             This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. I am NOT a FINANCIAL ADVISOR nor am I a lawyer! Any content provided is solely based on my own experience as well as my research. Any content provided on this channel by myself or anyone affiliated are simply OUR VIEWS and are to be used for EDUCATIONAL and ENTERTAINMENT PURPOSES ONLY. There are no guarantees to any success from the information provided, and any success from the content provided will be based on many variables and will vary for each individual.

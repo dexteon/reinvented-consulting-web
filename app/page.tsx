@@ -57,7 +57,8 @@ export default function HomePage() {
             className="object-cover object-top opacity-30"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/95 to-[#0B0F19]/60" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_50%,rgba(212,175,55,0.15),transparent_50%)]" />
         </div>
 
         <div className="container-section relative z-10 py-20">
@@ -90,7 +91,7 @@ export default function HomePage() {
 
               <div className="flex flex-wrap gap-4 mt-8">
                 {["No experience required", "Works in all 50 states + Caribbean", "Results in 30–90 days"].map((t) => (
-                  <div key={t} className="flex items-center gap-2 text-white/60 text-sm">
+                  <div key={t} className="flex items-center gap-2 text-[#94A3B8] text-sm">
                     <CheckCircle2 className="w-4 h-4 text-gold" />
                     {t}
                   </div>
@@ -107,7 +108,7 @@ export default function HomePage() {
                   alt="Dub Washington — Founder, Reinvented Consulting"
                   width={400}
                   height={600}
-                  className="relative z-10 drop-shadow-2xl"
+                  className="relative z-10 drop-shadow-2xl shadow-[0_25px_60px_rgba(0,0,0,0.5)]"
                   priority
                 />
               </div>
@@ -120,13 +121,14 @@ export default function HomePage() {
       <SocialProof dark />
 
       {/* ─── VIDEO INTRO ──────────────────────────────────── */}
-      <section className="section-dark py-20 border-t border-gold/10">
+      <section className="section-dark py-20">
+        <div className="divider-fade mb-20" />
         <div className="container-section">
           <div className="text-center mb-10">
-            <h2 className="font-serif text-4xl font-bold text-white mb-3">
+            <h2 className="font-serif text-4xl font-bold text-[#F8FAFC] mb-3">
               Hear It From <span className="text-gradient-gold">Dub Himself</span>
             </h2>
-            <p className="text-white/60 max-w-xl mx-auto">
+            <p className="text-[#94A3B8] max-w-xl mx-auto">
               Watch how the Reinvented Consulting system helps entrepreneurs access real funding.
             </p>
           </div>
@@ -148,10 +150,10 @@ export default function HomePage() {
       <section className="section-light py-20">
         <div className="container-section">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-navy mb-3">
+            <h2 className="font-serif text-4xl font-bold text-[#F8FAFC] mb-3">
               The Reinvented Mentorship Offers You
             </h2>
-            <p className="text-muted max-w-xl mx-auto">
+            <p className="text-[#94A3B8] max-w-xl mx-auto">
               A complete system for building credit, accessing funding, and creating wealth.
             </p>
           </div>
@@ -161,8 +163,8 @@ export default function HomePage() {
                 <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
                   <Icon className="w-7 h-7 text-gold" />
                 </div>
-                <h3 className="font-serif text-lg font-bold text-navy mb-2">{title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{desc}</p>
+                <h3 className="font-serif text-lg font-bold text-[#F8FAFC] mb-2">{title}</h3>
+                <p className="text-[#94A3B8] text-sm leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -174,7 +176,7 @@ export default function HomePage() {
         <div className="container-section">
           <div className="text-center mb-12">
             <h2 className="font-serif text-4xl font-bold text-white mb-3">How It Works</h2>
-            <p className="text-white/60 max-w-xl mx-auto">A proven three-step system used by 9,100+ entrepreneurs to go from zero to funded.</p>
+            <p className="text-[#94A3B8] max-w-xl mx-auto">A proven three-step system used by 9,100+ entrepreneurs to go from zero to funded.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map(({ step, title, desc }) => (
@@ -184,7 +186,7 @@ export default function HomePage() {
                   <span className="text-gold font-bold text-sm">{step}</span>
                 </div>
                 <h3 className="font-serif text-xl font-bold text-white mb-2">{title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
+                <p className="text-[#94A3B8] text-sm leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -195,25 +197,25 @@ export default function HomePage() {
       <section className="section-light py-20">
         <div className="container-section">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-navy mb-3">
+            <h2 className="font-serif text-4xl font-bold text-[#F8FAFC] mb-3">
               Choose Your Starting Point
             </h2>
-            <p className="text-muted max-w-xl mx-auto">Every path leads to the same goal. Start where it makes sense for you.</p>
+            <p className="text-[#94A3B8] max-w-xl mx-auto">Every path leads to the same goal. Start where it makes sense for you.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {products.map(({ title, price, desc, href, cta, featured }) => (
-              <div key={href} className={`card-light card-accent flex flex-col gap-3 ${featured ? "border-gold/40 ring-1 ring-gold/30 bg-gold/5" : ""}`}>
+              <div key={href} className={`card-light card-accent flex flex-col gap-3 hover:border-[#D4AF37]/50 hover:-translate-y-1 transition-all duration-300 ${featured ? "border-gold/40 ring-1 ring-gold/30 bg-white/10" : ""}`}>
                 {featured && (
-                  <div className="inline-flex w-fit bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
+                  <div className="inline-flex w-fit bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black text-xs font-bold px-3 py-1 rounded-full">
                     Most Popular
                   </div>
                 )}
                 <div>
                   <p className="text-gold text-sm font-semibold">{price}</p>
-                  <h3 className="font-serif text-lg font-bold text-navy">{title}</h3>
-                  <p className="text-muted text-sm mt-1">{desc}</p>
+                  <h3 className="font-serif text-lg font-bold text-[#F8FAFC]">{title}</h3>
+                  <p className="text-[#94A3B8] text-sm mt-1">{desc}</p>
                 </div>
-                <Link href={href} className={featured ? "btn-gold mt-auto" : "inline-flex items-center justify-center gap-2 bg-navy text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-navy-light transition-all mt-auto"}>
+                <Link href={href} className={featured ? "btn-gold mt-auto" : "inline-flex items-center justify-center gap-2 bg-white/10 text-[#F8FAFC] text-sm font-semibold px-5 py-2.5 rounded-xl border border-white/[0.08] hover:border-gold/50 transition-all mt-auto"}>
                   {cta}
                 </Link>
               </div>
@@ -230,7 +232,7 @@ export default function HomePage() {
               <h2 className="font-serif text-4xl font-bold text-white mb-4">
                 Inside the <span className="text-gradient-gold">Mentorship</span>
               </h2>
-              <p className="text-white/60 mb-6 leading-relaxed">
+              <p className="text-[#94A3B8] mb-6 leading-relaxed">
                 Get access to a full curriculum covering Funding Resources, Business Structure,
                 Business Credit, Accountability Calls, and even Scaling with A.I. — all inside
                 our private Skool community.
@@ -264,8 +266,8 @@ export default function HomePage() {
       <section className="section-light py-20">
         <div className="container-section">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-navy mb-3">Real Students. Real Results.</h2>
-            <p className="text-muted max-w-xl mx-auto">These are actual community members who applied the Reinvented Consulting system.</p>
+            <h2 className="font-serif text-4xl font-bold text-[#F8FAFC] mb-3">Real Students. Real Results.</h2>
+            <p className="text-[#94A3B8] max-w-xl mx-auto">These are actual community members who applied the Reinvented Consulting system.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {wins.map((w) => <TestimonialCard key={w.name} {...w} />)}
@@ -274,7 +276,8 @@ export default function HomePage() {
       </section>
 
       {/* ─── VIDEO DISTRIBUTION TEASER ─────────────────────── */}
-      <section className="section-dark py-16 border-t border-gold/20">
+      <section className="section-dark py-16">
+        <div className="divider-fade" />
         <div className="container-section">
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-sm px-4 py-1.5 rounded-full mb-4">
@@ -283,7 +286,7 @@ export default function HomePage() {
             <h2 className="font-serif text-3xl font-bold text-white mb-4">
               Running a Content Business? Automate Your Video to 10+ Platforms.
             </h2>
-            <p className="text-white/60 mb-6">
+            <p className="text-[#94A3B8] mb-6">
               Record once. Our AI processes, formats, captions in EN/ES, and publishes to YouTube, Reels, TikTok, Pinterest, Threads, WhatsApp, X, and Caribbean ad networks — automatically.
             </p>
             <Link href="/video-distribution" className="btn-outline">
@@ -294,15 +297,15 @@ export default function HomePage() {
       </section>
 
       {/* ─── FINAL CTA ─────────────────────────────────────── */}
-      <section className="bg-gold py-16">
+      <section className="bg-surface py-16 border-t border-white/[0.08]">
         <div className="container-section text-center">
-          <h2 className="font-serif text-4xl font-bold text-navy mb-4">
+          <h2 className="font-serif text-4xl font-bold text-[#F8FAFC] mb-4">
             Ready to Start Building Business Credit?
           </h2>
-          <p className="text-navy/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-[#94A3B8] text-lg mb-8 max-w-xl mx-auto">
             Join the free webinar and learn the exact system Dub used to go from 420 to $2M+ in funding.
           </p>
-          <Link href="/webinar" className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all">
+          <Link href="/webinar" className="btn-gold text-lg">
             Register for Free Webinar <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

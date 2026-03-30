@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function DemoBanner() {
   return (
-    <div className="sticky top-0 z-[60] bg-ca-navy border-b border-ca-electric/30 text-center text-sm py-2.5 px-4 shadow-lg shadow-ca-electric/5">
+    <div className="sticky top-0 z-[60] bg-[#080C15] border-b border-ca-electric/30 text-center text-sm py-2.5 px-4 shadow-lg shadow-ca-electric/5">
       <span className="text-ca-electric font-bold text-xs tracking-widest uppercase mr-2 bg-ca-electric/10 px-2 py-0.5 rounded">DEMO</span>
       <span className="text-white/70">Built by </span>
       <span className="font-bold text-ca-electric">CyberAutomations</span>

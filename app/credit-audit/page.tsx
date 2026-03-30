@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Clock, CheckCircle2, Calendar } from "lucide-react";
 import TestimonialCard from "@/components/shared/TestimonialCard";
 import TrustBadges from "@/components/shared/TrustBadges";
+import CalendlyEmbed from "@/components/shared/CalendlyEmbed";
 
 export const metadata: Metadata = {
   title: "Credit Repair Audit — $297 | Reinvented Consulting",
@@ -69,7 +70,7 @@ export default function CreditAuditPage() {
       {/* ─── WHAT HAPPENS ─────────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl font-bold text-navy text-center mb-10">What Happens on the Call</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] text-center mb-10">What Happens on the Call</h2>
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gold/20 hidden md:block" />
@@ -83,8 +84,8 @@ export default function CreditAuditPage() {
                   </div>
                   <div className="card-light card-accent flex-1">
                     <p className="text-gold text-xs font-semibold mb-1">{time}</p>
-                    <h3 className="font-serif font-bold text-navy mb-1">{title}</h3>
-                    <p className="text-muted text-sm">{desc}</p>
+                    <h3 className="font-serif font-bold text-[#F8FAFC] mb-1">{title}</h3>
+                    <p className="text-[#94A3B8] text-sm">{desc}</p>
                   </div>
                 </div>
               ))}
@@ -113,51 +114,47 @@ export default function CreditAuditPage() {
       {/* ─── TESTIMONIALS ─────────────────────────────────── */}
       <section className="section-light py-14">
         <div className="container-section">
-          <h2 className="font-serif text-2xl font-bold text-navy text-center mb-8">Audit Results</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#F8FAFC] text-center mb-8">Audit Results</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => <TestimonialCard key={t.name} {...t} />)}
           </div>
         </div>
       </section>
 
-      {/* ─── CALENDLY NOTE ────────────────────────────────── */}
-      <section className="section-dark py-14">
-        <div className="container-section max-w-2xl mx-auto text-center">
-          <Calendar className="w-8 h-8 text-gold mx-auto mb-4" />
-          <h2 className="font-serif text-2xl font-bold text-white mb-4">How Booking Works</h2>
-          <p className="text-white/60 mb-6">
-            Complete your $297 payment. Immediately after, you will be redirected to our booking page
-            where you select any available 30-minute slot that works for your schedule.
-          </p>
-          <div className="card-dark text-left">
-            <p className="text-gold text-xs font-semibold mb-1">Step 1</p>
-            <p className="text-white/80 text-sm mb-4">Complete payment below</p>
-            <p className="text-gold text-xs font-semibold mb-1">Step 2</p>
-            <p className="text-white/80 text-sm mb-4">Select your appointment time (Calendly)</p>
-            <p className="text-gold text-xs font-semibold mb-1">Step 3</p>
-            <p className="text-white/80 text-sm">Receive confirmation email with Zoom link</p>
+      {/* ─── CALENDLY BOOKING ─────────────────────────────── */}
+      <section id="book" className="section-dark py-14">
+        <div className="container-section max-w-3xl mx-auto">
+          <div className="text-center mb-8">
+            <Calendar className="w-8 h-8 text-gold mx-auto mb-4" />
+            <h2 className="font-serif text-2xl font-bold text-white mb-3">Book Your Audit</h2>
+            <p className="text-white/60">
+              Select any available 30-minute slot that works for your schedule.
+            </p>
           </div>
+          <CalendlyEmbed
+            url={process.env.NEXT_PUBLIC_CALENDLY_AUDIT_URL ?? "https://calendly.com/cyberautomations/credit-audit"}
+          />
         </div>
       </section>
 
       {/* ─── FINAL CTA ────────────────────────────────────── */}
-      <section className="bg-gold py-14">
+      <section className="bg-surface py-14 border-t border-white/[0.08]">
         <div className="container-section text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-4">
             Ready to Know Exactly What to Fix?
           </h2>
-          <p className="text-navy/70 mb-8 max-w-lg mx-auto">
+          <p className="text-[#94A3B8] mb-8 max-w-lg mx-auto">
             $297. 30 minutes. Leave with a complete action plan. 40-50% of audit clients enroll in mentorship after getting their roadmap.
           </p>
-          <a href="/api/checkout?product=credit_audit" className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all">
+          <a href="/api/checkout?product=credit_audit" className="btn-gold text-lg px-8 py-4">
             Book My Audit <ArrowRight className="w-5 h-5" />
           </a>
           <TrustBadges />
 
           {/* Upsell to mentorship */}
-          <p className="text-navy/50 text-sm mt-6">
+          <p className="text-[#94A3B8]/50 text-sm mt-6">
             Already done an audit?{" "}
-            <Link href="/mentorship" className="underline hover:text-navy transition-colors">
+            <Link href="/mentorship" className="underline hover:text-gold transition-colors">
               View the Mentorship Program
             </Link>
           </p>

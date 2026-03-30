@@ -4,7 +4,7 @@ import { Instagram, Youtube, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-deep text-white/60 border-t border-white/10">
+    <footer className="bg-[#080C15] text-[#94A3B8] border-t border-white/[0.08]">
       <div className="container-section py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="text-white text-sm font-semibold mb-3">Products</h4>
+            <h4 className="text-[#F8FAFC] text-sm font-semibold mb-3">Products</h4>
             <ul className="space-y-2 text-sm">
               {[
                 ["/webinar", "Free Webinar"],
@@ -52,7 +52,7 @@ export default function Footer() {
 
           {/* For Businesses */}
           <div>
-            <h4 className="text-white text-sm font-semibold mb-3">For Businesses</h4>
+            <h4 className="text-[#F8FAFC] text-sm font-semibold mb-3">For Businesses</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/video-distribution" className="hover:text-gold transition-colors">
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-white text-sm font-semibold mb-3">Company</h4>
+            <h4 className="text-[#F8FAFC] text-sm font-semibold mb-3">Company</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-gold transition-colors">Terms of Service</Link></li>
@@ -85,9 +85,9 @@ export default function Footer() {
         </div>
 
         {/* Disclaimer */}
-        <div className="border-t border-white/10 pt-6 text-xs leading-relaxed text-white/40">
+        <div className="border-t border-white/[0.08] pt-6 text-xs leading-relaxed text-white/40">
           <p>
-            <strong className="text-white/60">Income Disclaimer:</strong> Results mentioned on this site are not typical.
+            <strong className="text-[#94A3B8]">Income Disclaimer:</strong> Results mentioned on this site are not typical.
             Individual results will vary based on effort, experience, and market conditions. Reinvented Consulting does not
             guarantee any specific outcome. Any income figures shown are illustrative examples, not guarantees of earnings.
             Please see our full{" "}

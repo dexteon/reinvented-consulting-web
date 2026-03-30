@@ -103,19 +103,19 @@ export default function RequirementsPage() {
         <div className="container-section max-w-3xl mx-auto">
           <div className="flex items-center gap-2 mb-8">
             <AlertCircle className="w-5 h-5 text-red-500" />
-            <h2 className="font-serif text-2xl font-bold text-navy">Required (Must-Have)</h2>
+            <h2 className="font-serif text-2xl font-bold text-[#F8FAFC]">Required (Must-Have)</h2>
           </div>
           <div className="space-y-4">
             {mustHave.map(({ icon: Icon, tool, what, why, effort }) => (
               <div key={tool} className="card-light card-accent">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-navy/5 flex items-center justify-center shrink-0">
-                    <Icon className="w-5 h-5 text-navy" />
+                  <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+                    <Icon className="w-5 h-5 text-gold" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif font-bold text-navy">{tool}</h3>
-                    <p className="text-sm text-navy/80 mt-1"><strong>What we need:</strong> {what}</p>
-                    <p className="text-sm text-muted mt-1"><strong>Why:</strong> {why}</p>
+                    <h3 className="font-serif font-bold text-[#F8FAFC]">{tool}</h3>
+                    <p className="text-sm text-[#94A3B8] mt-1"><strong>What we need:</strong> {what}</p>
+                    <p className="text-sm text-[#94A3B8]/70 mt-1"><strong>Why:</strong> {why}</p>
                     <div className="inline-flex items-center gap-1.5 bg-gold/10 text-gold text-xs font-semibold px-3 py-1 rounded-full mt-2">
                       <CheckCircle2 className="w-3 h-3" /> Your effort: {effort}
                     </div>
@@ -162,7 +162,7 @@ export default function RequirementsPage() {
       {/* ─── TIMELINE ─────────────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section max-w-3xl mx-auto">
-          <h2 className="font-serif text-2xl font-bold text-navy text-center mb-8">From Demo to Live in 6 Days</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#F8FAFC] text-center mb-8">From Demo to Live in 6 Days</h2>
           <div className="space-y-4">
             {timeline.map(({ phase, title, desc }) => (
               <div key={phase} className="flex gap-4 card-light card-accent">
@@ -170,8 +170,8 @@ export default function RequirementsPage() {
                   <span className="text-gold text-sm font-bold">{phase}</span>
                 </div>
                 <div>
-                  <h3 className="font-serif font-bold text-navy text-sm">{title}</h3>
-                  <p className="text-muted text-sm">{desc}</p>
+                  <h3 className="font-serif font-bold text-[#F8FAFC] text-sm">{title}</h3>
+                  <p className="text-[#94A3B8] text-sm">{desc}</p>
                 </div>
               </div>
             ))}
@@ -210,18 +210,18 @@ export default function RequirementsPage() {
       </section>
 
       {/* ─── CTA ──────────────────────────────────────────── */}
-      <section className="bg-gold py-14">
+      <section className="bg-surface py-14 border-t border-white/[0.08]">
         <div className="container-section text-center">
-          <h2 className="font-serif text-3xl font-bold text-navy mb-4">
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-4">
             Ready to Turn This Demo Into Your Live Funnel?
           </h2>
-          <p className="text-navy/70 mb-6 max-w-lg mx-auto">
+          <p className="text-[#94A3B8] mb-6 max-w-lg mx-auto">
             Send us your Stripe and GHL keys and we will have you live in under a week.
             The infrastructure is already built — we just need to plug in your accounts.
           </p>
           <a
             href="mailto:kenneth@reinventedconsulting.com?subject=Ready%20to%20go%20live&body=I%20reviewed%20the%20demo%20site%20and%20I%27m%20ready%20to%20connect%20my%20accounts."
-            className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-light transition-all"
+            className="btn-gold text-lg px-8 py-4"
           >
             Let Us Get Started <ArrowRight className="w-5 h-5" />
           </a>

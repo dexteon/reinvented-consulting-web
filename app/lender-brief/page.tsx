@@ -65,15 +65,15 @@ export default function LenderBriefPage() {
       {/* ─── WHAT IS IN EACH BRIEF ────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section">
-          <h2 className="font-serif text-3xl font-bold text-navy text-center mb-10">What is in Each Brief</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] text-center mb-10">What is in Each Brief</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {briefContents.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="card-light card-accent text-center">
                 <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-5 h-5 text-gold" />
                 </div>
-                <h3 className="font-serif font-bold text-navy mb-2 text-sm">{title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{desc}</p>
+                <h3 className="font-serif font-bold text-[#F8FAFC] mb-2 text-sm">{title}</h3>
+                <p className="text-[#94A3B8] text-sm leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
@@ -93,7 +93,7 @@ export default function LenderBriefPage() {
               </div>
             ))}
           </div>
-          <div className="mt-6 p-4 rounded-xl border border-gold/20 bg-gold/5 text-center">
+          <div className="mt-6 p-4 rounded-xl border border-gold/20 bg-white/5 text-center">
             <p className="text-white/50 text-xs">Full issue content available to subscribers only. The above are representative headlines from past editions.</p>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function LenderBriefPage() {
       {/* ─── WHO GETS MOST VALUE ──────────────────────────── */}
       <section className="section-light py-14">
         <div className="container-section max-w-2xl mx-auto">
-          <h2 className="font-serif text-2xl font-bold text-navy text-center mb-6">Who Gets the Most Value</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#F8FAFC] text-center mb-6">Who Gets the Most Value</h2>
           <div className="space-y-3">
             {[
               "Mentorship alumni who want to stay current after graduating",
@@ -111,7 +111,7 @@ export default function LenderBriefPage() {
               "Business owners building a long-term credit portfolio",
               "Coaches and educators in the funding space",
             ].map((t) => (
-              <div key={t} className="flex items-start gap-3 card-light card-accent text-sm text-navy/80">
+              <div key={t} className="flex items-start gap-3 card-light card-accent text-sm text-[#94A3B8]">
                 <CheckCircle2 className="w-4 h-4 text-success shrink-0 mt-0.5" />
                 {t}
               </div>
@@ -158,12 +158,12 @@ export default function LenderBriefPage() {
       {/* ─── FAQ ──────────────────────────────────────────── */}
       <section className="section-light py-14">
         <div className="container-section max-w-2xl">
-          <h2 className="font-serif text-2xl font-bold text-navy text-center mb-8">Questions</h2>
+          <h2 className="font-serif text-2xl font-bold text-[#F8FAFC] text-center mb-8">Questions</h2>
           <div className="space-y-3">
             {faqs.map(({ q, a }) => (
               <div key={q} className="card-light card-accent">
-                <p className="font-semibold text-navy text-sm mb-1">{q}</p>
-                <p className="text-muted text-sm">{a}</p>
+                <p className="font-semibold text-[#F8FAFC] text-sm mb-1">{q}</p>
+                <p className="text-[#94A3B8] text-sm">{a}</p>
               </div>
             ))}
           </div>

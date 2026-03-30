@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle2, Play, ArrowRight, MessageCircle, Globe, TrendingUp } from "lucide-react";
 import TrustBadges from "@/components/shared/TrustBadges";
+import CalendlyEmbed from "@/components/shared/CalendlyEmbed";
 
 export const metadata: Metadata = {
   title: "Video Distribution Add-On — Automate Your Content to 10+ Platforms",
@@ -128,7 +129,7 @@ export default function VideoDistributionPage() {
       {/* ─── PLATFORM GRID ────────────────────────────────── */}
       <section className="section-light py-16">
         <div className="container-section">
-          <h2 className="font-serif text-3xl font-bold text-navy text-center mb-10">Where Your Content Goes</h2>
+          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] text-center mb-10">Where Your Content Goes</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {platforms.map(({ category, color, items }) => (
               <div key={category} className="card-light">
@@ -136,8 +137,8 @@ export default function VideoDistributionPage() {
                 <ul className="space-y-3">
                   {items.map(({ name, detail }) => (
                     <li key={name}>
-                      <p className="text-sm font-semibold text-navy">{name}</p>
-                      <p className="text-xs text-muted">{detail}</p>
+                      <p className="text-sm font-semibold text-[#F8FAFC]">{name}</p>
+                      <p className="text-xs text-[#94A3B8]">{detail}</p>
                     </li>
                   ))}
                 </ul>
@@ -166,23 +167,23 @@ export default function VideoDistributionPage() {
       </section>
 
       {/* ─── CARIBBEAN OPPORTUNITY ────────────────────────── */}
-      <section className="bg-gold/5 border-y border-gold/20 py-14">
+      <section className="bg-surface border-y border-white/[0.08] py-14">
         <div className="container-section">
           <div className="max-w-2xl mx-auto text-center mb-10">
-            <h2 className="font-serif text-3xl font-bold text-navy mb-3">The Caribbean Opportunity Nobody Else Is Using</h2>
-            <p className="text-muted">PR and USVI are completely untapped for business funding educators. Here&apos;s what the data shows:</p>
+            <h2 className="font-serif text-3xl font-bold text-[#F8FAFC] mb-3">The Caribbean Opportunity Nobody Else Is Using</h2>
+            <p className="text-[#94A3B8]">PR and USVI are completely untapped for business funding educators. Here&apos;s what the data shows:</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {caribbeanStats.map(({ icon: Icon, stat, label }) => (
               <div key={label} className="text-center card-light">
                 <Icon className="w-8 h-8 text-gold mx-auto mb-3" />
-                <p className="font-bold text-3xl text-navy mb-1">{stat}</p>
-                <p className="text-muted text-sm">{label}</p>
+                <p className="font-bold text-3xl text-[#F8FAFC] mb-1">{stat}</p>
+                <p className="text-[#94A3B8] text-sm">{label}</p>
               </div>
             ))}
           </div>
           <div className="mt-8 card-light card-accent max-w-2xl mx-auto">
-            <p className="text-navy text-sm leading-relaxed">
+            <p className="text-[#94A3B8] text-sm leading-relaxed">
               <strong>In-app pre-roll inside lifestyle and finance apps</strong> (Hinge, Bumble, personal finance apps)
               is completely untapped by business funding educators. People using those apps are actively thinking about
               their financial future. Nobody in this niche is running there. This is a first-mover opportunity targeting
@@ -205,12 +206,12 @@ export default function VideoDistributionPage() {
                 key={tier.name}
                 className={`rounded-xl p-6 flex flex-col gap-4 border ${
                   tier.featured
-                    ? "bg-navy-card border-gold shadow-2xl shadow-gold/10 ring-1 ring-gold/30 scale-105"
-                    : "bg-navy-deep border-white/10"
+                    ? "bg-white/5 backdrop-blur-lg border-gold shadow-2xl shadow-gold/10 ring-1 ring-gold/30 scale-105"
+                    : "bg-surface/80 border-white/[0.08]"
                 }`}
               >
                 {tier.badge && (
-                  <div className="inline-flex w-fit bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
+                  <div className="inline-flex w-fit bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black text-xs font-bold px-3 py-1 rounded-full">
                     {tier.badge}
                   </div>
                 )}
@@ -232,10 +233,10 @@ export default function VideoDistributionPage() {
                 </ul>
                 <a
                   href="#demo"
-                  className={`block text-center font-semibold py-3 rounded-lg transition-all ${
+                  className={`block text-center font-bold py-3 rounded-xl transition-all duration-300 ${
                     tier.featured
-                      ? "bg-gold text-navy hover:bg-gold-light"
-                      : "border border-white/20 text-white hover:bg-white/5"
+                      ? "bg-gradient-to-r from-[#F9D976] to-[#D4AF37] text-black hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]"
+                      : "border-2 border-gold text-gold hover:bg-gradient-to-r hover:from-[#F9D976] hover:to-[#D4AF37] hover:text-black hover:-translate-y-1"
                   }`}
                 >
                   {tier.cta}
@@ -250,8 +251,8 @@ export default function VideoDistributionPage() {
       {/* ─── INFRASTRUCTURE NOTE ──────────────────────────── */}
       <section className="section-light py-12">
         <div className="container-section max-w-2xl text-center">
-          <h3 className="font-serif text-xl font-bold text-navy mb-3">Built on Enterprise Infrastructure</h3>
-          <p className="text-muted text-sm leading-relaxed">
+          <h3 className="font-serif text-xl font-bold text-[#F8FAFC] mb-3">Built on Enterprise Infrastructure</h3>
+          <p className="text-[#94A3B8] text-sm leading-relaxed">
             Powered by GCP Cloud Run + Cloud Storage for video processing, FFmpeg for format conversion,
             Whisper for transcription, Claude API for caption generation, and n8n for workflow orchestration.
             The same infrastructure already running inside your Content Machine.
@@ -266,18 +267,9 @@ export default function VideoDistributionPage() {
           <p className="text-white/60 mb-8">
             Book a 20-minute demo. We&apos;ll process one of your actual videos and show you the output across all platforms.
           </p>
-          {/* Calendly embed placeholder — replace with real URL */}
-          <div className="bg-navy-card rounded-xl border border-white/10 p-8">
-            <p className="text-white/40 text-sm mb-4">Calendly booking will appear here</p>
-            <a
-              href={process.env.NEXT_PUBLIC_CALENDLY_VIDEO_DEMO_URL ?? "https://calendly.com/reinventedconsulting"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold"
-            >
-              Book a 20-Minute Demo <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
+          <CalendlyEmbed
+            url={process.env.NEXT_PUBLIC_CALENDLY_VIDEO_DEMO_URL ?? "https://calendly.com/cyberautomations/video-demo"}
+          />
         </div>
       </section>
     </>
