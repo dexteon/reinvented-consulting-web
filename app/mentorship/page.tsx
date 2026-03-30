@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, X, ArrowRight, Users } from "lucide-react";
 import TestimonialCard from "@/components/shared/TestimonialCard";
 import TrustBadges from "@/components/shared/TrustBadges";
@@ -97,7 +98,10 @@ export default function MentorshipPage() {
     <>
       {/* ─── HERO ─────────────────────────────────────────── */}
       <section className="section-dark py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy" />
+        <div className="absolute inset-0">
+          <Image src="/images/rc/dub-bg.png" alt="" fill className="object-cover object-top opacity-25" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/95 to-navy" />
+        </div>
         <div className="container-section relative z-10 text-center max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-sm px-4 py-1.5 rounded-full mb-6">
             <Users className="w-3.5 h-3.5" /> 9,100+ Community Members
@@ -148,6 +152,39 @@ export default function MentorshipPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── VIDEO + COURSES ─────────────────────────────── */}
+      <section className="section-dark py-16">
+        <div className="container-section">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-2xl" style={{ paddingBottom: "56.25%", position: "relative" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1160390059?title=0&byline=0&portrait=0&autopause=0"
+                className="absolute inset-0 w-full h-full"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Reinvented Consulting Mentorship"
+              />
+            </div>
+            <div>
+              <h2 className="font-serif text-3xl font-bold text-white mb-4">See What&apos;s Inside</h2>
+              <p className="text-white/60 mb-6">
+                Full course library with structured modules — from Funding Sequences to Business Credit
+                to Scaling with A.I. Plus monthly accountability calls and a private community of 9,100+ members.
+              </p>
+              <div className="rounded-2xl overflow-hidden border border-gold/20">
+                <Image
+                  src="/images/rc/courses.jpg"
+                  alt="Reinvented Mentorship course modules"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>

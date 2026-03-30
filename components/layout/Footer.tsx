@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Youtube, Twitter } from "lucide-react";
 
 export default function Footer() {
@@ -8,8 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link href="/" className="font-serif text-xl font-bold text-white">
-              Reinvented<span className="text-gold">.</span>
+            <Link href="/">
+              <Image src="/images/rc/logo.png" alt="Reinvented Consulting" width={120} height={42} className="h-10 w-auto" />
             </Link>
             <p className="mt-3 text-sm leading-relaxed">
               Helping entrepreneurs build the business credit that gets them funded.
@@ -93,7 +94,7 @@ export default function Footer() {
             <Link href="/disclaimer" className="underline hover:text-gold">income disclaimer</Link>.
           </p>
           <p className="mt-3">
-            © {new Date().getFullYear()} Reinvented Consulting LLC. All rights reserved.
+            © {new Date().getFullYear()} Reinvented Consulting LLC. All rights reserved. NO REFUNDS AFTER 30 DAYS!
           </p>
         </div>
       </div>

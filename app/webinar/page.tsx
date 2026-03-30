@@ -116,7 +116,7 @@ export default function WebinarPage() {
                   <input
                     {...register("firstName")}
                     type="text"
-                    placeholder="Your first name"
+                    placeholder="Full Name..."
                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
                   />
                   {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName.message}</p>}
@@ -127,7 +127,7 @@ export default function WebinarPage() {
                   <input
                     {...register("email")}
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder="Email Address..."
                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
                   />
                   {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
@@ -138,7 +138,7 @@ export default function WebinarPage() {
                   <input
                     {...register("phone")}
                     type="tel"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="Phone Number..."
                     className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gold"
                   />
                 </div>
@@ -175,6 +175,25 @@ export default function WebinarPage() {
                 </p>
               </form>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── VIDEO PREVIEW ──────────────────────────────── */}
+      <section className="section-dark py-16 border-t border-gold/10">
+        <div className="container-section max-w-3xl text-center">
+          <h2 className="font-serif text-3xl font-bold text-white mb-4">
+            Preview: What You&apos;ll Learn
+          </h2>
+          <p className="text-white/60 mb-8">Watch a quick intro from Dub Washington on what the mentorship covers.</p>
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-gold/20" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              src="https://player.vimeo.com/video/1160390059?title=0&byline=0&portrait=0&autopause=0"
+              className="absolute inset-0 w-full h-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="Reinvented Consulting — Preview"
+            />
           </div>
         </div>
       </section>

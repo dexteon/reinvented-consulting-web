@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Play } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, CheckCircle2, Play, CreditCard, TrendingUp, Plane, DollarSign } from "lucide-react";
 import SocialProof from "@/components/shared/SocialProof";
 import TestimonialCard from "@/components/shared/TestimonialCard";
 
 export const metadata: Metadata = {
   title: "Build Business Credit That Banks Say YES To",
+  openGraph: {
+    images: [{ url: "/images/rc/mentoring-social.jpg", width: 1200, height: 630 }],
+  },
 };
 
 const wins = [
@@ -32,50 +36,81 @@ const products = [
   { title: "Lender Intelligence Brief", price: "$19/mo", desc: "Weekly digest of new lender opportunities and rule changes.", href: "/lender-brief", cta: "Subscribe →" },
 ];
 
+const pillars = [
+  { icon: CreditCard, title: "Personal & Business Credit Mastery", desc: "Unlock the secrets to building and structuring credit, paving the way for maximum funding opportunities." },
+  { icon: Plane, title: "Travel Hacking Methods", desc: "Discover how to travel the world for free without needing high-tier credit cards." },
+  { icon: DollarSign, title: "Income-Generating Assets", desc: "Access various income-producing assets to invest strategically and build your financial empire." },
+  { icon: TrendingUp, title: "Level Up with 0% APR", desc: "Stack credit cards at 0% interest, invest into income-generating assets, and leverage Other People's Money." },
+];
+
 export default function HomePage() {
   return (
     <>
       {/* ─── HERO ──────────────────────────────────────────── */}
       <section className="section-dark relative overflow-hidden min-h-[85vh] flex items-center">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy opacity-90" />
-        {/* Gold accent */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-gold/5 to-transparent" />
+        {/* Background: Dub on throne */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/rc/dub-bg.png"
+            alt=""
+            fill
+            className="object-cover object-top opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-navy/60" />
+        </div>
 
         <div className="container-section relative z-10 py-20">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-sm font-medium px-4 py-1.5 rounded-full mb-6">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse-slow" />
-              9,100+ entrepreneurs already funded
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left: Copy */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+                <span className="w-2 h-2 rounded-full bg-gold animate-pulse-slow" />
+                9,100+ entrepreneurs already funded
+              </div>
+
+              <h1 className="font-serif text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
+                Make The Banks Compete To{" "}
+                <span className="text-gradient-gold">Lend You Money</span>
+              </h1>
+
+              <p className="text-xl text-white/70 leading-relaxed mb-8">
+                Dub Washington went from a 420 credit score to $2M+ in funding in 24 months.
+                Now he teaches the exact system to entrepreneurs across the US and Caribbean.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Link href="/webinar" className="btn-gold text-lg px-8 py-4">
+                  Join Free Webinar <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link href="/mentorship" className="btn-outline text-lg px-8 py-4">
+                  View Mentorship →
+                </Link>
+              </div>
+
+              <div className="flex flex-wrap gap-4 mt-8">
+                {["No experience required", "Works in all 50 states + Caribbean", "Results in 30–90 days"].map((t) => (
+                  <div key={t} className="flex items-center gap-2 text-white/60 text-sm">
+                    <CheckCircle2 className="w-4 h-4 text-gold" />
+                    {t}
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
-              Build Business Credit That Banks{" "}
-              <span className="text-gradient-gold">Say YES To</span>
-            </h1>
-
-            <p className="text-xl text-white/70 leading-relaxed mb-8">
-              Dub Washington went from a 420 credit score to $2M+ in funding in 24 months.
-              Now he teaches the exact system to entrepreneurs across the US and Caribbean.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link href="/webinar" className="btn-gold text-lg px-8 py-4">
-                Join Free Webinar <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link href="/mentorship" className="btn-outline text-lg px-8 py-4">
-                View Mentorship →
-              </Link>
-            </div>
-
-            {/* Quick wins */}
-            <div className="flex flex-wrap gap-4 mt-8">
-              {["No experience required", "Works in all 50 states", "Results in 30–90 days"].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-white/60 text-sm">
-                  <CheckCircle2 className="w-4 h-4 text-gold" />
-                  {t}
-                </div>
-              ))}
+            {/* Right: Dub full-body image */}
+            <div className="hidden md:flex justify-center">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-t from-gold/20 via-transparent to-transparent rounded-3xl blur-2xl" />
+                <Image
+                  src="/images/rc/dub-fullbody.png"
+                  alt="Dub Washington — Founder, Reinvented Consulting"
+                  width={400}
+                  height={600}
+                  className="relative z-10 drop-shadow-2xl"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -84,21 +119,49 @@ export default function HomePage() {
       {/* ─── SOCIAL PROOF BAR ──────────────────────────────── */}
       <SocialProof dark />
 
-      {/* ─── HOW IT WORKS ──────────────────────────────────── */}
+      {/* ─── VIDEO INTRO ──────────────────────────────────── */}
+      <section className="section-dark py-20 border-t border-gold/10">
+        <div className="container-section">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-4xl font-bold text-white mb-3">
+              Hear It From <span className="text-gradient-gold">Dub Himself</span>
+            </h2>
+            <p className="text-white/60 max-w-xl mx-auto">
+              Watch how the Reinvented Consulting system helps entrepreneurs access real funding.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-gold/20" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1160390059?title=0&byline=0&portrait=0&autopause=0"
+                className="absolute inset-0 w-full h-full"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title="Reinvented Consulting — Mentorship Overview"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── WHAT YOU GET (PILLARS) ────────────────────────── */}
       <section className="section-light py-20">
         <div className="container-section">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-navy mb-3">How It Works</h2>
-            <p className="text-muted max-w-xl mx-auto">A proven three-step system used by 9,100+ entrepreneurs to go from zero to funded.</p>
+            <h2 className="font-serif text-4xl font-bold text-navy mb-3">
+              The Reinvented Mentorship Offers You
+            </h2>
+            <p className="text-muted max-w-xl mx-auto">
+              A complete system for building credit, accessing funding, and creating wealth.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map(({ step, title, desc }) => (
-              <div key={step} className="card-light relative">
-                <div className="text-gold/20 font-serif font-bold text-6xl absolute top-4 right-4">{step}</div>
-                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mb-4">
-                  <span className="text-gold font-bold text-sm">{step}</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {pillars.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="card-light text-center group hover:border-gold/30 transition-all">
+                <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/20 transition-colors">
+                  <Icon className="w-7 h-7 text-gold" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-navy mb-2">{title}</h3>
+                <h3 className="font-serif text-lg font-bold text-navy mb-2">{title}</h3>
                 <p className="text-muted text-sm leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -106,18 +169,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── PRODUCT SUITE ─────────────────────────────────── */}
+      {/* ─── HOW IT WORKS ──────────────────────────────────── */}
       <section className="section-dark py-20">
         <div className="container-section">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-white mb-3">
-              Choose Your <span className="text-gradient-gold">Starting Point</span>
+            <h2 className="font-serif text-4xl font-bold text-white mb-3">How It Works</h2>
+            <p className="text-white/60 max-w-xl mx-auto">A proven three-step system used by 9,100+ entrepreneurs to go from zero to funded.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {steps.map(({ step, title, desc }) => (
+              <div key={step} className="card-dark relative">
+                <div className="text-gold/20 font-serif font-bold text-6xl absolute top-4 right-4">{step}</div>
+                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center mb-4">
+                  <span className="text-gold font-bold text-sm">{step}</span>
+                </div>
+                <h3 className="font-serif text-xl font-bold text-white mb-2">{title}</h3>
+                <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── PRODUCT SUITE ─────────────────────────────────── */}
+      <section className="section-light py-20">
+        <div className="container-section">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-4xl font-bold text-navy mb-3">
+              Choose Your Starting Point
             </h2>
-            <p className="text-white/60 max-w-xl mx-auto">Every path leads to the same goal. Start where it makes sense for you.</p>
+            <p className="text-muted max-w-xl mx-auto">Every path leads to the same goal. Start where it makes sense for you.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {products.map(({ title, price, desc, href, cta, featured }) => (
-              <div key={href} className={`card-dark card-accent flex flex-col gap-3 ${featured ? "border-gold/40 bg-navy-card ring-1 ring-gold/30" : ""}`}>
+              <div key={href} className={`card-light card-accent flex flex-col gap-3 ${featured ? "border-gold/40 ring-1 ring-gold/30 bg-gold/5" : ""}`}>
                 {featured && (
                   <div className="inline-flex w-fit bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">
                     Most Popular
@@ -125,14 +210,52 @@ export default function HomePage() {
                 )}
                 <div>
                   <p className="text-gold text-sm font-semibold">{price}</p>
-                  <h3 className="font-serif text-lg font-bold text-white">{title}</h3>
-                  <p className="text-white/60 text-sm mt-1">{desc}</p>
+                  <h3 className="font-serif text-lg font-bold text-navy">{title}</h3>
+                  <p className="text-muted text-sm mt-1">{desc}</p>
                 </div>
-                <Link href={href} className={featured ? "btn-gold mt-auto" : "btn-outline mt-auto text-sm px-5 py-2.5"}>
+                <Link href={href} className={featured ? "btn-gold mt-auto" : "inline-flex items-center justify-center gap-2 bg-navy text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-navy-light transition-all mt-auto"}>
                   {cta}
                 </Link>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── COURSE PREVIEW ────────────────────────────────── */}
+      <section className="section-dark py-20 border-t border-gold/10">
+        <div className="container-section">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-serif text-4xl font-bold text-white mb-4">
+                Inside the <span className="text-gradient-gold">Mentorship</span>
+              </h2>
+              <p className="text-white/60 mb-6 leading-relaxed">
+                Get access to a full curriculum covering Funding Resources, Business Structure,
+                Business Credit, Accountability Calls, and even Scaling with A.I. — all inside
+                our private Skool community.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {["Funding Sequences & Resources", "Funding Business Structure", "Business Credit Deep-Dive", "Monthly Accountability Calls", "Chat GPT Mastery & Scaling with A.I."].map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-white/80">
+                    <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/mentorship" className="btn-gold">
+                Join The Mentorship <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-gold/20 shadow-2xl">
+              <Image
+                src="/images/rc/courses.jpg"
+                alt="Reinvented Mentorship course modules on Skool"
+                width={800}
+                height={600}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
