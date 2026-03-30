@@ -21,7 +21,7 @@ export default function Navbar() {
   const [productsOpen, setProductsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-navy/95 backdrop-blur border-b border-white/10">
+    <nav className="sticky top-[36px] z-50 bg-navy/95 backdrop-blur border-b border-white/10">
       <div className="container-section flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -61,6 +61,9 @@ export default function Navbar() {
             )}
           </div>
 
+          <Link href="/pricing" className="hover:text-gold transition-colors">
+            Our Services
+          </Link>
           <a
             href="https://www.skool.com/reinvented-mentorship-9193"
             target="_blank"

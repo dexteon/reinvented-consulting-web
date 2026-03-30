@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function DemoBanner() {
   return (
-    <div className="bg-gold text-navy text-center text-sm font-semibold py-2 px-4">
+    <div className="sticky top-0 z-[60] bg-gold text-navy text-center text-sm font-semibold py-2 px-4 shadow-md">
       <span className="opacity-80">This is a demo site built by </span>
       <span className="font-bold">CyberAutomations</span>
       <span className="opacity-80"> showing what your optimized funnel could look like. </span>

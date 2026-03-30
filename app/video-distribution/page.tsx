@@ -39,49 +39,49 @@ const steps = [
 const tiers = [
   {
     name: "Starter",
-    price: "$300",
+    price: "$500",
     period: "/month",
-    videos: 4,
+    videos: 8,
     features: [
-      "4 videos processed/month",
+      "8 videos processed/month",
       "YouTube + Reels + TikTok + X + Threads + Pinterest",
       "English captions",
       "Monthly performance report",
-      "n8n + GCP Cloud Run pipeline",
     ],
     cta: "Get Started",
     featured: false,
   },
   {
     name: "Growth",
-    price: "$400",
+    price: "$1,000",
     period: "/month",
-    videos: 8,
+    videos: 15,
     features: [
-      "8 videos processed/month",
+      "15 videos processed/month",
       "All Starter platforms +",
       "Facebook geo-targeted (PR/USVI)",
       "WhatsApp Business broadcasts",
       "Bilingual captions (EN + ES)",
-      "Monthly report + analytics",
+      "Analytics dashboard",
     ],
     cta: "Get Started",
     featured: true,
     badge: "Most Popular",
   },
   {
-    name: "Pro",
-    price: "$500",
+    name: "Full-Stack",
+    price: "$1,500",
     period: "/month",
-    videos: 15,
+    videos: -1,
     features: [
-      "15 videos processed/month",
+      "Unlimited videos",
       "All Growth platforms +",
       "PropellerAds campaigns",
       "InMobi in-app pre-roll",
+      "Content Machine included",
+      "Compliance gate",
+      "Slack support SLA",
       "Weekly strategy report",
-      "Priority support",
-      "Ad spend management setup",
     ],
     cta: "Get Started",
     featured: false,
@@ -120,7 +120,7 @@ export default function VideoDistributionPage() {
                 Book a Demo →
               </a>
             </div>
-            <p className="text-white/40 text-sm mt-4">Starting at $300/month + your ad spend</p>
+            <p className="text-white/40 text-sm mt-4">Starting at $500/month + your ad spend</p>
           </div>
         </div>
       </section>
@@ -220,7 +220,7 @@ export default function VideoDistributionPage() {
                     <span className={`text-4xl font-bold ${tier.featured ? "text-gold" : "text-white"}`}>{tier.price}</span>
                     <span className="text-white/40 text-sm">{tier.period}</span>
                   </div>
-                  <p className="text-white/50 text-xs mt-1">{tier.videos} videos/month</p>
+                  <p className="text-white/50 text-xs mt-1">{tier.videos === -1 ? "Unlimited videos" : `${tier.videos} videos/month`}</p>
                 </div>
                 <ul className="space-y-2.5 flex-1">
                   {tier.features.map((f) => (
