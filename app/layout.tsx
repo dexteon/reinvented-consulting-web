@@ -5,6 +5,7 @@ import "./globals.css";
 import DemoBanner from "@/components/layout/DemoBanner";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import DemoBadge from "@/components/shared/DemoBadge";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <DemoBadge />
         <Analytics />
       </body>
     </html>

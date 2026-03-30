@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Reinvented Consulting (Dub's demo pages)
         navy: {
           DEFAULT: "#0D1B2A",
           light: "#1A2E3B",
@@ -20,6 +21,16 @@ const config: Config = {
           light: "#E8C84A",
           dark: "#B8962E",
           muted: "#F0D060",
+        },
+        // CyberAutomations brand
+        ca: {
+          navy: "#0A0F1E",
+          charcoal: "#111827",
+          electric: "#00D4FF",
+          mint: "#00FFB2",
+          slate: "#1E293B",
+          muted: "#64748B",
+          offwhite: "#F8FAFC",
         },
         success: "#02C39A",
         muted: "#6B7A8D",

@@ -84,7 +84,8 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a href="https://calendly.com/cyberautomations" target="_blank" rel="noopener noreferrer" className="btn-outline text-sm px-5 py-2.5 !border-gold/60 !text-gold" title="Book a call with CyberAutomations about AI integration for your business">
+          <a href="https://calendly.com/cyberautomations" target="_blank" rel="noopener noreferrer" className="text-sm px-5 py-2.5 border-2 border-ca-electric text-ca-electric font-semibold rounded-lg hover:bg-ca-electric hover:text-ca-navy transition-all inline-flex items-center gap-1.5" title="Book a call with CyberAutomations about AI integration for your business">
+            <span className="text-[10px] bg-ca-electric/20 px-1.5 py-0.5 rounded font-bold tracking-wider">CA</span>
             AI Integration Call
           </a>
           <Link href="/webinar" className="btn-gold text-sm px-5 py-2.5">
