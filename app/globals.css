@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #0D1B2A;
+    --gold: #D4AF37;
+    --success: #02C39A;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Primary CTA button */
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-gold text-navy font-semibold px-8 py-4 rounded-lg
+           hover:bg-gold-light active:bg-gold-dark transition-all duration-200
+           shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base;
+  }
+
+  /* Secondary button (outlined) */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-gold text-gold font-semibold px-8 py-4
+           rounded-lg hover:bg-gold hover:text-navy transition-all duration-200 text-base;
+  }
+
+  /* Dark hero section */
+  .section-dark {
+    @apply bg-navy text-white;
+  }
+
+  /* Light section */
+  .section-light {
+    @apply bg-off-white text-navy;
+  }
+
+  /* Card on dark bg */
+  .card-dark {
+    @apply bg-navy-card rounded-xl p-6 border border-white/10;
+  }
+
+  /* Card on light bg */
+  .card-light {
+    @apply bg-white rounded-xl p-6 shadow-md border border-gray-100;
+  }
+
+  /* Gold accent left border */
+  .card-accent {
+    @apply border-l-4 border-gold;
+  }
+
+  /* Section container */
+  .container-section {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Gradient text */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold to-gold-muted bg-clip-text text-transparent;
+  }
+}
